@@ -43,20 +43,20 @@
         </div>
       </nav>
 
-      <section id="hero">
-        <div class="p-16 flex justify-between gap-20">
+      <section id="hero" class="h-screen">
+        <div class="p-8 md:p-16 flex items-center justify-between gap-20 h-full ">
           <div id="text-hero" class="w-full md:w-2/5">
-            <h1 class="text-6xl font-bold">
+            <h1 class="text-6xl md:text-6xl font-bold">
               Get <span class="text-primaryRed">Real Estate</span>,
               <span class="text-primaryRed">Relocation</span> or
               <span class="text-primaryRed">Cleaning</span> services in One
               Click
             </h1>
-            <p class="text-2xl text-gray-primary my-5">
+            <p class="text-xl text-gray-primary my-5">
               We bring your dream home to life
             </p>
             <button
-              class="text-md bg-primaryRed text-white py-3 px-6 rounded-md"
+              class="text-sm bg-primaryRed text-white py-3 px-6 rounded-md"
             >
               View all Services
             </button>
@@ -88,7 +88,7 @@
       </section>
 
       <section id="whatweoffer">
-        <div class="p-16">
+        <div class="p-8 md:p-16">
           <h2 class="text-3xl font-bold mb-6">
             What we <span class="text-primaryRed">Offer</span>
           </h2>
@@ -145,34 +145,40 @@
       </section>
 
       <section id="whychooseus">
-        <div class="flex flex-between gap-20 p-16 bg-gray-Gray_2 rounded-3xl">
-          <div class="w-3/5 overflow-hidden rounded-3xl">
+        <div
+          class="flex flex-between flex-col md:flex-row gap-20 p-8 md:p-16 bg-gray-Gray_2 rounded-3xl"
+        >
+          <div class="w-full md:w-3/5 overflow-hidden rounded-3xl">
             <img
               src="assets/real-estate.jpg"
               alt="real estate image"
               class="w-full"
             />
           </div>
-          <div class="w-2/3">
+          <div class="w-full md:w-2/3">
             <h2 class="text-3xl font-bold">
               Why <span class="text-primaryRed">choose us</span>
             </h2>
-            <ul class="grid grid-cols-2 gap-8 mt-6">
+            <ul class="grid grid-cols-2 gap-8 mb-6 mt-6">
               <li>
-                <h3 class="font-bold text-xl">Easy Home Search</h3>
-                <p>Find your dream home in just a few clicks</p>
+                <h3 class="font-bold text-md">Easy Home Search</h3>
+                <p class="text-sm">Find your dream home in just a few clicks</p>
               </li>
               <li>
-                <h3 class="font-bold text-xl">Stress-free moving</h3>
-                <p>Reliable relocation services that are swift</p>
+                <h3 class="font-bold text-md">Stress-free moving</h3>
+                <p class="text-sm">
+                  Reliable relocation services that are swift
+                </p>
               </li>
               <li>
-                <h3 class="font-bold text-xl">Sparkling clean</h3>
-                <p>Trusted Cleaning solutions that leave you in awe!</p>
+                <h3 class="font-bold text-md">Sparkling clean</h3>
+                <p class="text-sm">
+                  Trusted Cleaning solutions that leave you in awe!
+                </p>
               </li>
               <li>
-                <h3 class="font-bold text-xl">Scam free</h3>
-                <p>Verified Listings and secure payments</p>
+                <h3 class="font-bold text-md">Scam free</h3>
+                <p class="text-sm">Verified Listings and secure payments</p>
               </li>
             </ul>
           </div>
@@ -180,45 +186,60 @@
       </section>
 
       <footer>
-        <div class="p-16 text-white bg-black">
-          <div class="flex flex-between">
-            <div>
+        <div class="p-8 md:p-16 text-white bg-black">
+          <div
+            class="flex justify-between flex-col gap-y-10 md:gap-0 md:flex-row mb-6"
+          >
+            <div class="w-full md:w-2/5">
               <h2 class="text-3xl font-bold">Join our Newsletter</h2>
-              <p class="text-gray-primary">
+              <p class="text-gray-primary mt-2">
                 Be the first to the updates on the latest!
               </p>
             </div>
-            <div>
+            <div class="w-full md:w-2/5">
               <form action="#">
-                <div class="relative">
-                  <img src="assets/user.png" alt="user" />
-                  <input type="text" />
-                  <button type="submit">Subscribe</button>
+                <div class="flex justify-between gap-4 overflow-hidden">
+                  <input
+                    type="text"
+                    class="w-full bg-black placeholder:text-gray-primary text-sm px-6 py-3 rounded-full border border-gray-primary"
+                    placeholder="Enter your email"
+                  />
+                  <button
+                    type="submit"
+                    class="text-sm px-6 rounded-full bg-white text-black"
+                  >
+                    Subscribe
+                  </button>
                 </div>
               </form>
             </div>
           </div>
-          <div>
+          <hr class="relative h-0.5 bg-gray-primary" />
+          <div
+            class="my-6 flex justify-between flex-col md:flex-row gap-y-10 md:gap-0"
+          >
             <div>
               <a href="#"><img src="assets/logo-alt.png" alt="ABRMS logo" /></a>
 
-              <h2>ABRMS</h2>
-              <p>We bring your dream to life</p>
+              <p class="mt-5 text-gray-primary">
+                We bring your dream home to life
+              </p>
             </div>
             <div id="quicklinks">
-              <ul>
+              <ul class="grid grid-cols-2 gap-x-10 gap-y-3 text-gray-primary">
                 <li>Buy or rent property</li>
+                <li>Jobs</li>
                 <li>Sell as realtor</li>
+                <li>Services</li>
                 <li>Hire a cleaning service</li>
                 <li>Hire a moving service</li>
-                <li>Jobs</li>
-                <li>Services</li>
               </ul>
             </div>
           </div>
-          <div>
+          <hr class="relative h-0.5 bg-gray-primary" />
+          <div class="mt-6 flex justify-between">
             <p>&copy; 2024 ABRMS</p>
-            <ul>
+            <ul class="flex flex-row gap-5 text-gray-primary">
               <li><a href="#">Terms of service</a></li>
               <li><a href="#">Cookies</a></li>
               <li><a href="#">Privacy Policy</a></li>
