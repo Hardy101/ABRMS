@@ -17,6 +17,10 @@
               blue: "#384B70",
             },
           },
+          backgroundImage: {
+            "hero-img": "url('/assets/real-estate.jpg')",
+            "no-img": "none",
+          },
         },
       };
     </script>
@@ -40,25 +44,35 @@
               >
             </li>
           </ul>
-          <button class="md:hidden">
+          <button class="md:hidden flex items-center flex-row gap-2">
             <img src="assets/menu.png" alt="menu button" class="w-7" />
-            MENU
+            <span>MENU</span>
           </button>
         </div>
       </nav>
 
-      <section id="hero" class="h-screen">
+      <section
+        id="hero"
+        class="relative h-screen bg-hero-img bg-cover bg-no-repeat md:bg-no-img"
+      >
+        <div
+          id="overlay"
+          class="md:hidden absolute h-full w-full bg-gray-primary backdrop-blur-md opacity-70"
+        ></div>
         <div
           class="p-8 md:p-16 flex items-center justify-between gap-20 h-full"
         >
-          <div id="text-hero" class="w-full md:w-2/5">
-            <h1 class="text-6xl md:text-6xl font-bold">
+          <div
+            id="text-hero"
+            class="w-full md:w-3/5 -translate-y-16 md:translate-y-0"
+          >
+            <h1 class="text-6xl font-bold">
               Get <span class="text-primaryRed">Real Estate</span>,
               <span class="text-primaryRed">Relocation</span> or
               <span class="text-primaryRed">Cleaning</span> services in One
               Click
             </h1>
-            <p class="text-xl text-gray-primary my-5">
+            <p class="text-xl my-5">
               We bring your dream home to life
             </p>
             <button
