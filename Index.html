@@ -30,7 +30,7 @@
       <nav>
         <div class="w-full p-10 md:px-16 md:py-8 flex justify-between">
           <a href="#"><img src="assets/logo.png" alt="ABRMS logo" /></a>
-          <ul class="flex justify-between gap-5">
+          <ul class="md:flex justify-between gap-5 hidden">
             <li><a href="#">Services</a></li>
             <li><a href="#">Jobs</a></li>
             <li><button>Menu</button></li>
@@ -40,11 +40,16 @@
               >
             </li>
           </ul>
+          <button class="md:hidden">
+            <img src="assets/menu.png" alt="menu button" class="w-7"/>
+          </button>
         </div>
       </nav>
 
       <section id="hero" class="h-screen">
-        <div class="p-8 md:p-16 flex items-center justify-between gap-20 h-full ">
+        <div
+          class="p-8 md:p-16 flex items-center justify-between gap-20 h-full"
+        >
           <div id="text-hero" class="w-full md:w-2/5">
             <h1 class="text-6xl md:text-6xl font-bold">
               Get <span class="text-primaryRed">Real Estate</span>,
