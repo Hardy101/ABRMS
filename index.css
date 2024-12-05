@@ -2,66 +2,111 @@
   .content-auto {
     content-visibility: auto;
   }
-  .container {
-    grid-column-template: repeat(6, 1fr);
-    grid-row-template: repeat(6, 30px);
-    height: 600px;
-  }
-  .div-img-1 {
-    grid-column: 2 / 5;
-    grid-row: 1 / 5;
-    background: #cbcbcb;
-  }
-  .div-img-2 {
-    grid-column: 4 / 7;
-    grid-row: 4 / 7;
-    background: #dedede;
+
+  .fira-sans-thin {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 100;
+    font-style: normal;
   }
 
-  .merriweather-light {
-    font-family: "Merriweather", serif;
+  .fira-sans-extralight {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  .fira-sans-light {
+    font-family: "Fira Sans", sans-serif;
     font-weight: 300;
     font-style: normal;
   }
 
-  .merriweather-regular {
-    font-family: "Merriweather", serif;
+  .fira-sans-regular {
+    font-family: "Fira Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
   }
 
-  .merriweather-bold {
-    font-family: "Merriweather", serif;
+  .fira-sans-medium {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  .fira-sans-semibold {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  .fira-sans-bold {
+    font-family: "Fira Sans", sans-serif;
     font-weight: 700;
     font-style: normal;
   }
 
-  .merriweather-black {
-    font-family: "Merriweather", serif;
+  .fira-sans-extrabold {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  .fira-sans-black {
+    font-family: "Fira Sans", sans-serif;
     font-weight: 900;
     font-style: normal;
   }
 
-  .merriweather-light-italic {
-    font-family: "Merriweather", serif;
+  .fira-sans-thin-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+
+  .fira-sans-extralight-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+
+  .fira-sans-light-italic {
+    font-family: "Fira Sans", sans-serif;
     font-weight: 300;
     font-style: italic;
   }
 
-  .merriweather-regular-italic {
-    font-family: "Merriweather", serif;
+  .fira-sans-regular-italic {
+    font-family: "Fira Sans", sans-serif;
     font-weight: 400;
     font-style: italic;
   }
 
-  .merriweather-bold-italic {
-    font-family: "Merriweather", serif;
+  .fira-sans-medium-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  .fira-sans-semibold-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  .fira-sans-bold-italic {
+    font-family: "Fira Sans", sans-serif;
     font-weight: 700;
     font-style: italic;
   }
 
-  .merriweather-black-italic {
-    font-family: "Merriweather", serif;
+  .fira-sans-extrabold-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+
+  .fira-sans-black-italic {
+    font-family: "Fira Sans", sans-serif;
     font-weight: 900;
     font-style: italic;
   }

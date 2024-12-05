@@ -26,23 +26,25 @@
       };
     </script>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
     </style>
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <main class="merriweather-regular">
+    <main class="fira-sans-regular">
       <nav>
         <div class="w-full p-10 md:px-16 md:py-8 flex justify-between">
           <a href="#"><img src="assets/logo.png" alt="ABRMS logo" /></a>
           <ul class="md:flex justify-between gap-5 hidden">
+            <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Jobs</a></li>
-            <li><button>Menu</button></li>
+            <li><a href="#">Download</a></li>
+          </ul>
+          <ul class="md:flex justify-between gap-5 hidden">
+            <li><a href="#">Login</a></li>
             <li>
-              <a href="#" class="bg-blue text-white p-2 rounded-md"
-                >Sign in / up</a
-              >
+              <a href="#" class="bg-blue text-white p-2">Register</a>
             </li>
           </ul>
           <button class="md:hidden flex items-center flex-row gap-2">
@@ -52,10 +54,7 @@
         </div>
       </nav>
 
-      <section
-        id="hero"
-        class="relative h-screen bg-hero-img bg-cover bg-no-repeat md:bg-no-img"
-      >
+      <section id="hero" class="relative h-screen md:h-full">
         <div
           id="overlay"
           class="md:hidden absolute h-full w-full bg-gray-primary backdrop-blur-md opacity-70"
@@ -80,15 +79,15 @@
               View all Services
             </button>
           </div>
-          <div id="text-img" class="container hidden md:grid w-3/5">
-            <div class="div-img-1">
+          <div id="img-hero" class="w-3/5 h-3/4 flex justify-between">
+            <div class="div-img-1 w-2/5">
               <img
-                src="assets/moving.jpg"
-                alt="moving image"
+                src="assets/real-estate.jpg"
+                alt="real estate image"
                 class="w-full h-full"
               />
             </div>
-            <div class="div-img-2">
+            <div class="div-img-2 w-2/5">
               <img
                 src="assets/cleaning.jpg"
                 alt="cleaning image"
