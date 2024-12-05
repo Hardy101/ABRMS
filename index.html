@@ -10,7 +10,9 @@
           extend: {
             colors: {
               primaryRed: "#CF0A11",
+              darkBlue: "#040F16",
               gray: {
+                1: "#E4E7E9",
                 primary: "#898989",
                 Gray_2: "#F2F2F2",
                 gray_3: "rgb(205 205 205)",
@@ -31,9 +33,9 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <main class="fira-sans-regular">
+    <main class="fira-sans-regular bg-gray-1">
       <nav>
-        <div class="w-full p-10 md:px-16 md:py-8 flex justify-between">
+        <div class="w-full p-8 md:px-16 md:py-10 flex justify-between text-sm">
           <a href="#"><img src="assets/logo.png" alt="ABRMS logo" /></a>
           <ul class="md:flex justify-between gap-5 hidden">
             <li><a href="#">Home</a></li>
@@ -44,7 +46,7 @@
           <ul class="md:flex justify-between gap-5 hidden">
             <li><a href="#">Login</a></li>
             <li>
-              <a href="#" class="bg-blue text-white p-2">Register</a>
+              <a href="#" class="bg-blue text-white py-2 px-6">Register</a>
             </li>
           </ul>
           <button class="md:hidden flex items-center flex-row gap-2">
@@ -59,27 +61,25 @@
           id="overlay"
           class="md:hidden absolute h-full w-full bg-gray-primary backdrop-blur-md opacity-70"
         ></div>
-        <div
-          class="p-8 md:p-16 flex items-center justify-between gap-20 h-full"
-        >
+        <div class="py-8 px-8 md:px-16 flex items-center justify-between gap-20 h-full">
           <div
             id="text-hero"
-            class="w-full md:w-3/5 -translate-y-16 md:translate-y-0"
+            class="w-full md:w-4/5 -translate-y-16 md:translate-y-0"
           >
-            <h1 class="text-6xl font-bold">
+            <h1 class="text-4xl md:text-6xl font-bold">
               Get <span class="text-primaryRed">Real Estate</span>,
               <span class="text-primaryRed">Relocation</span> or
               <span class="text-primaryRed">Cleaning</span> services in One
               Click
             </h1>
-            <p class="text-xl my-5">We bring your dream home to life</p>
-            <button
-              class="text-sm bg-primaryRed text-white py-3 px-6 rounded-md"
-            >
-              View all Services
+            <p class="text-md text-darkBlue my-5">
+              We bring your dream home to life
+            </p>
+            <button class="text-md bg-primaryRed text-white py-3 px-6">
+              Explore our services
             </button>
           </div>
-          <div id="img-hero" class="w-3/5 h-3/4 flex justify-between">
+          <div id="img-hero" class="w-4/5 h-96 hidden md:flex justify-between gap-10">
             <div class="div-img-1 w-2/5">
               <img
                 src="assets/real-estate.jpg"
@@ -101,6 +101,29 @@
                 class="w-full h-full -translate-x-1/2"
               />
             </div> -->
+          </div>
+          <div class="absolute pl-8 pr-48 py-3 bg-white bottom-0 right-0">
+            <div class="w-full hidden md:flex justify-between gap-20">
+              <div class="flex justify-center gap-4">
+                <img
+                  src="assets/Vector-1.png"
+                  alt="email image"
+                  class="scale-75"
+                />
+                <span class="text-sm my-auto">abrms@biz.com</span>
+              </div>
+              <div class="flex justify-center gap-4">
+                <img
+                  src="assets/Vector.png"
+                  alt="phone image"
+                  class="scale-75"
+                />
+                <span class="text-sm my-auto" style="width: 130px"
+                  ><span class="fira-sans-bold">(+234)</span> 0123 4567
+                  890</span
+                >
+              </div>
+            </div>
           </div>
         </div>
       </section>
