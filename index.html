@@ -16,8 +16,10 @@
                 primary: "#898989",
                 Gray_2: "#F2F2F2",
                 gray_3: "rgb(205 205 205)",
+                gray_4: "#747474",
               },
               blue: "#384B70",
+              turquoise_custon: "#01BAEF",
             },
           },
           backgroundImage: {
@@ -34,7 +36,7 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <main class="fira-sans-regular bg-[F3F3F3]">
+    <main class="fira-sans-regular bg-[#F3F3F3]">
       <nav class="fixed w-full z-50">
         <div class="w-full p-8 md:px-16 md:py-10 flex justify-between text-sm">
           <a href="#"><img src="assets/logo.png" alt="ABRMS logo" /></a>
@@ -138,7 +140,7 @@
 
       <section id="whatweoffer">
         <div class="p-8 md:p-16">
-          <h2 class="text-3xl font-bold mb-6">
+          <h2 class="text-3xl font-bold mb-12">
             What we <span class="text-primaryRed">Offer</span>
           </h2>
           <div class="flex justify-between gap-10 flex-col md:flex-row">
@@ -189,40 +191,77 @@
       </section>
 
       <section id="whychooseus">
-        <div
-          class="flex flex-between flex-col md:flex-row gap-20 p-8 md:p-16 bg-gray-Gray_2 rounded-3xl"
-        >
-          <div class="w-full md:w-3/5 overflow-hidden rounded-3xl">
-            <img
-              src="assets/real-estate.jpg"
-              alt="real estate image"
-              class="w-full"
-            />
-          </div>
-          <div class="w-full md:w-2/3">
+        <div class="flex flex-between flex-col md:flex-row gap-20 p-8 md:p-16">
+          <div class="w-full md:w-3/5">
             <h2 class="text-3xl font-bold">
               Why <span class="text-primaryRed">choose us</span>
             </h2>
+            <p class="text-sm text-gray-gray_4 my-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+              id praesentium repellat eos, consequatur vitae vero error
+              consequuntur esse aliquid!
+            </p>
+            <div
+              class="grid grid-rows-3 grid-flow-col gap-4 rounded-3xl md:rounded-none mt-8"
+            >
+              <img
+                src="assets/cleaning.jpg"
+                alt="real estate image"
+                class="w-full row-span-3 md:w-auto"
+              />
+              <img
+                src="assets/real-estate.jpg"
+                alt="real estate image"
+                class="w-full col-span-2 md:w-auto"
+              />
+              <img
+                src="assets/moving.jpg"
+                alt="real estate image"
+                class="w-full col-span-2 md:w-auto"
+              />
+            </div>
+          </div>
+          <div class="w-full md:w-2/3">
             <ul class="grid grid-cols-2 gap-8 mb-6 mt-6">
               <li>
-                <h3 class="font-bold text-md">Easy Home Search</h3>
-                <p class="text-sm">Find your dream home in just a few clicks</p>
+                <span
+                  class="inline-block text-turquoise_custon text-xl font-bold italic bg-white box-shadow-1 py-2 px-4 rounded-xl"
+                  >01</span
+                >
+                <h3 class="font-bold text-md mt-3">Easy Home Search</h3>
+                <p class="text-sm text-gray-gray_4 mt-1">
+                  Find your dream home in just a few clicks
+                </p>
               </li>
               <li>
-                <h3 class="font-bold text-md">Stress-free moving</h3>
-                <p class="text-sm">
+                <span
+                  class="inline-block text-turquoise_custon text-xl font-bold italic bg-white box-shadow-1 py-2 px-4 rounded-xl"
+                  >02</span
+                >
+                <h3 class="font-bold text-md mt-3">Stress-free moving</h3>
+                <p class="text-sm text-gray-gray_4 mt-1">
                   Reliable relocation services that are swift
                 </p>
               </li>
               <li>
-                <h3 class="font-bold text-md">Sparkling clean</h3>
-                <p class="text-sm">
+                <span
+                  class="inline-block text-turquoise_custon text-xl font-bold italic bg-white box-shadow-1 py-2 px-4 rounded-xl"
+                  >03</span
+                >
+                <h3 class="font-bold text-md mt-3">Sparkling clean</h3>
+                <p class="text-sm text-gray-gray_4 mt-1">
                   Trusted Cleaning solutions that leave you in awe!
                 </p>
               </li>
               <li>
-                <h3 class="font-bold text-md">Scam free</h3>
-                <p class="text-sm">Verified Listings and secure payments</p>
+                <span
+                  class="inline-block text-turquoise_custon text-xl font-bold italic bg-white box-shadow-1 py-2 px-4 rounded-xl"
+                  >04</span
+                >
+                <h3 class="font-bold text-md mt-3">Scam free</h3>
+                <p class="text-sm text-gray-gray_4 mt-1">
+                  Verified Listings and secure payments
+                </p>
               </li>
             </ul>
           </div>
