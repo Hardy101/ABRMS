@@ -26,6 +26,7 @@
             "hero-img": "url('assets/real-estate.jpg')",
             "no-img": "none",
             hero: "url('assets/real-estate.jpg')",
+            pattern: "url('assets/bg-1.jpg')",
           },
         },
       };
@@ -34,9 +35,21 @@
       @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
     </style>
     <link rel="stylesheet" href="index.css" />
+    <title>ABRMS</title>
   </head>
   <body>
-    <main class="fira-sans-regular bg-[#F3F3F3]">
+    <main class="relative fira-sans-regular bg-[#F3F3F3]">
+      <section id="sidebar" class="hidden fixed w-full h-full bg-darkBlue z-30">
+        <div class="flex justify-center align-center">
+          <ul class="text-white text-2xl">
+            <li><a href=""></a>HOME</li>
+            <li><a href=""></a>JOBS</li>
+            <li><a href=""></a>SERVICES</li>
+            <li><a href=""></a>LOGIN</li>
+            <li><a href=""></a>REGISTER</li>
+          </ul>
+        </div>
+      </section>
       <nav class="fixed w-full z-50">
         <div class="w-full p-8 md:px-16 md:py-10 flex justify-between text-sm">
           <a href="#"><img src="assets/logo.png" alt="ABRMS logo" /></a>
@@ -101,7 +114,7 @@
           </div>
           <!-- Floating contact info -->
           <div
-            class="absolute w-full md:w-auto bottom-28 md:bottom-10 left-0 md:left-auto md:right-0 px-4 md:px-0 z-20"
+            class="absolute w-full md:w-auto bottom-28 md:bottom-14 left-0 md:left-auto md:right-0 px-4 md:px-0 z-20"
           >
             <div
               class="flex justify-center gap-8 md:gap-20 py-3 md:pl-8 md:pr-48 bg-white"
@@ -145,7 +158,9 @@
           </h2>
           <div class="flex justify-between gap-10 flex-col md:flex-row">
             <!-- real estate -->
-            <div class="flex items-start gap-10">
+            <div
+              class="flex items-start gap-10 px-8 py-4 bg-white rounded-3xl md:rounded-none md:bg-transparent md:p-0"
+            >
               <div class="flex items-start">
                 <img src="assets/Mask group.png" alt="" class="w-12 h-auto" />
               </div>
@@ -155,11 +170,20 @@
                   <li>Buying of properties</li>
                   <li>Renting</li>
                   <li>Selling or renting out properties (as realtors)</li>
+                  <li>
+                    <a
+                      href="real-estate.html"
+                      class="inline-block w-full px-4 py-2 rounded-xl bg-darkBlue text-white mt-3"
+                      >Get started</a
+                    >
+                  </li>
                 </ul>
               </div>
             </div>
             <!-- relocation -->
-            <div class="flex items-start gap-10">
+            <div
+              class="flex items-start gap-10 px-8 py-4 bg-white rounded-3xl md:rounded-none md:bg-transparent md:p-0"
+            >
               <div class="flex items-start">
                 <img src="assets/Mask group-1.png" alt="" class="w-12 h-auto" />
               </div>
@@ -169,11 +193,20 @@
                   <li>Buying of properties</li>
                   <li>Renting</li>
                   <li>Selling or renting out properties (as realtors)</li>
+                  <li>
+                    <a
+                      href="#"
+                      class="inline-block w-full px-4 py-2 rounded-xl bg-darkBlue text-white mt-3"
+                      >Get started</a
+                    >
+                  </li>
                 </ul>
               </div>
             </div>
             <!-- Cleaning -->
-            <div class="flex items-start gap-10">
+            <div
+              class="flex items-start gap-10 px-8 py-4 bg-white rounded-3xl md:rounded-none md:bg-transparent md:p-0"
+            >
               <div class="flex items-start">
                 <img src="assets/Mask group-2.png" alt="" class="w-12 h-auto" />
               </div>
@@ -183,6 +216,13 @@
                   <li>Buying of properties</li>
                   <li>Renting</li>
                   <li>Selling or renting out properties (as realtors)</li>
+                  <li>
+                    <a
+                      href="#"
+                      class="inline-block w-full px-4 py-2 rounded-xl bg-darkBlue text-white mt-3"
+                      >Get started</a
+                    >
+                  </li>
                 </ul>
               </div>
             </div>
@@ -191,7 +231,7 @@
       </section>
 
       <section id="whychooseus">
-        <div class="flex flex-between flex-col md:flex-row gap-20 p-8 md:p-16">
+        <div class="flex flex-between flex-col md:flex-row gap-16 p-8 md:p-16">
           <div class="w-full md:w-3/5">
             <h2 class="text-3xl font-bold">
               Why <span class="text-primaryRed">choose us</span>
@@ -202,22 +242,22 @@
               consequuntur esse aliquid!
             </p>
             <div
-              class="grid grid-rows-3 grid-flow-col gap-4 rounded-3xl md:rounded-none mt-8"
+              class="w-full grid grid-rows-2 grid-flow-col gap-4 rounded-3xl md:rounded-none mt-8"
             >
               <img
-                src="assets/cleaning.jpg"
+                src="assets/cleaning-2.jpg"
                 alt="real estate image"
-                class="w-full row-span-3 md:w-auto"
+                class="row-span-2 col-span-2 h-full md:w-auto"
               />
               <img
                 src="assets/real-estate.jpg"
                 alt="real estate image"
-                class="w-full col-span-2 md:w-auto"
+                class="col-span-2 h-full md:w-auto"
               />
               <img
                 src="assets/moving.jpg"
                 alt="real estate image"
-                class="w-full col-span-2 md:w-auto"
+                class="col-span-2 h-full md:w-auto"
               />
             </div>
           </div>
@@ -269,8 +309,8 @@
       </section>
 
       <footer>
-        <div class="p-8 md:p-16 text-white bg-black">
-          <div
+        <div class="p-8 md:p-16 text-white bg-darkBlue">
+          <!-- <div
             class="flex justify-between flex-col gap-y-10 md:gap-0 md:flex-row mb-6"
           >
             <div class="w-full md:w-2/5">
@@ -296,8 +336,7 @@
                 </div>
               </form>
             </div>
-          </div>
-          <hr class="relative h-0.5 bg-gray-primary" />
+          </div> -->
           <div
             class="my-6 flex justify-between flex-col md:flex-row gap-y-10 md:gap-0"
           >
