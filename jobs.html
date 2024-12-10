@@ -35,10 +35,10 @@
       @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
     </style>
     <link rel="stylesheet" href="index.css" />
-    <title>Real Estate</title>
+    <title>Jobs</title>
   </head>
   <body>
-    <main class="relative fira-sans-regular bg-[#F3F3F3]">
+    <main class="relative fira-sans-regular">
       <section id="sidebar" class="hidden fixed w-full h-full bg-darkBlue z-30">
         <div class="flex justify-center align-center">
           <ul class="text-white text-2xl">
@@ -53,11 +53,13 @@
 
       <nav class="fixed w-full z-50">
         <div class="w-full p-8 md:px-16 md:py-10 flex justify-between text-sm">
-          <a href="#"><img src="assets/logo.png" alt="ABRMS logo" /></a>
+          <a href="index.html"
+            ><img src="assets/logo.png" alt="ABRMS logo"
+          /></a>
           <ul class="md:flex justify-between gap-5 hidden">
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="#">Services</a></li>
-            <li><a href="#">Jobs</a></li>
+            <li><a href="#" class="font-bold">Jobs</a></li>
             <li><a href="#">Download</a></li>
           </ul>
           <ul class="md:flex justify-between gap-5 hidden">
@@ -72,6 +74,65 @@
         </div>
       </nav>
 
+      <section>
+        <div class="px-8 py-32 md:px-16">
+          <div class="header">
+            <h1 class="font-bold text-4xl">Available Jobs</h1>
+            <p class="text-gray-gray_4 mt-3">
+              Looking for jobs? Browse our latest job openings to view and apply
+              to the best jobs today!
+            </p>
+          </div>
+          <div class="search mt-8">
+            <form action="" class="w-full">
+              <div
+                class="form-control relative flex align-center bg-white px-4 rounded-xl border-2 border-gray-gray_3 overflow-hidden"
+              >
+                <input
+                  type="text"
+                  placeholder="Search job title or keyword"
+                  class="flex-1 py-4 md:py-8 focus:outline-none"
+                />
+                <input
+                  type="submit"
+                  value="Find Jobs"
+                  class="bg-primaryRed text-white rounded-md py-2 px-4 text-sm my-auto"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="jobs_body mt-8">
+            <h2 class="text-3xl font-bold text-gray-gray_4">250 Jobs result</h2>
+            <div class="mt-8">
+              <div class="job-result p-2 border border-gray-4 rounded-xl">
+                <div class="job-result-top bg-[#D9D9D9] p-4 rounded-xl">
+                  <p class="flex flex-col">
+                    <span
+                      class="bg-white rounded-3xl font-bold shrink py-2 px-4 text-sm"
+                      >1 Dec, 2024</span
+                    >
+                    <span class="jobauthor my-3 font-bold">ABRMS</span>
+                    <span class="jobtitle text-4xl">Realtor</span>
+                  </p>
+                  <p>
+                    <span>freelance</span>
+                    <span>urgent</span>
+                  </p>
+                </div>
+                <div class="job-result-bottom p-2 mt-3">
+                  <p class="flex flex-col">
+                    <span class="price"
+                      ><span class="font-bold">₦250</span>/listing</span
+                    >
+                    <span class="loc">Benin City</span>
+                  </p>
+                  <button></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <footer>
         <div class="p-8 md:p-16 text-white bg-darkBlue">
           <div
