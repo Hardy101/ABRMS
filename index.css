@@ -52,6 +52,13 @@
     font-weight: 400;
     font-style: italic;
   }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
   /* Media Queries */
   @media (max-width: 375px) {
     /* Styles for devices with a maximum width of 375px and a maximum height of 667px */

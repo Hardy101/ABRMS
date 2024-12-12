@@ -60,7 +60,11 @@
             </li>
           </ul>
           <button class="md:hidden my-auto">
-            <img src="assets/menu.png" alt="menu button" class="btn w-7" />
+            <img
+              src="assets/menu.png"
+              alt="menu button"
+              class="btn w-7 invert"
+            />
           </button>
         </div>
       </nav>
@@ -70,26 +74,23 @@
           <div class="text-center my-10 md:my-0">
             <p class="text-sm">
               <span class="text-gray-4">Are you new?</span>
-              <a href="register.html" class="font-bold"
+              <a href="register.html" class="font-bold text-primaryRed"
                 >Create an account with us</a
               >
             </p>
             <h1 class="text-5xl md:text-4xl mt-5">Login to Your Account</h1>
-            <p class="mt-5 text-gray-4 text-xl md:text-base">
-              We bring your dream home to life
-            </p>
             <form
-              class="grid grid-rows-2 md:grid-rows-2 mt-10 gap-y-10 gap-x-10"
+              class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-y-10 gap-x-10"
             >
               <div class="flex flex-col gap-5">
-                <div class="form-control">
+                <div class="form-control box-shadow-1">
                   <input
                     type="text"
                     placeholder="Phone, Email"
                     class="w-full rounded-full px-6 py-5 border border-gray-4 outline-none"
                   />
                 </div>
-                <div class="form-control">
+                <div class="form-control box-shadow-1">
                   <input
                     type="text"
                     placeholder="Passcode"
@@ -98,7 +99,7 @@
                 </div>
                 <div class="form-control flex justify-between">
                   <button
-                    class="flex justify-between w-full rounded-full bg-darkBlue text-white px-6 py-5 outline-none"
+                    class="flex justify-between w-full rounded-full bg-darkBlue text-white px-6 py-3 outline-none"
                   >
                     <span class="my-auto">Login to your Account</span>
                     <img
@@ -109,16 +110,34 @@
                   </button>
                 </div>
               </div>
-              <div class="flex flex-col gap-5 my-auto md:my-0">
-                <span class="w-full rounded-full px-6 py-5 border border-gray-4"
-                  >Sign in with your Gmail Account</span
+              <span class="md:hidden font-bold text-xl my-auto">OR</span>
+              <div class="flex flex-col gap-5 my-auto">
+                <p
+                  class="flex gap-5 rounded-full px-6 py-3 border border-gray-4 text-sm"
                 >
-                <span class="w-full rounded-full px-6 py-5 border border-gray-4"
-                  >Sign in with your facebook</span
+                  <img
+                    src="assets/google.png"
+                    alt="google image"
+                    right-ar
+                    class="w-6 h-auto"
+                  />
+                  <span class="my-auto">Sign in with Gmail</span>
+                </p>
+                <p
+                  class="flex gap-5 rounded-full px-6 py-3 border border-gray-4 text-sm"
                 >
+                  <img
+                    src="assets/google.png"
+                    alt="facebook image"
+                    class="w-6 h-auto"
+                  />
+                  <span class="my-auto">Sign in with facebook</span>
+                </p>
               </div>
               <div class="md:col-span-2">
-                <a href="#" class="font-bold">Forgot Passcode?</a>
+                <a href="reset.html" class="font-bold text-primaryRed"
+                  >Forgot Passcode?</a
+                >
               </div>
             </form>
           </div>

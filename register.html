@@ -60,7 +60,11 @@
             </li>
           </ul>
           <button class="md:hidden my-auto">
-            <img src="assets/menu.png" alt="menu button" class="btn w-7" />
+            <img
+              src="assets/menu.png"
+              alt="menu button"
+              class="btn w-7 invert"
+            />
           </button>
         </div>
       </nav>
@@ -70,13 +74,14 @@
           <div class="text-center my-10 md:my-0">
             <p class="text-sm">
               <span class="text-gray-4">Do you already have an account?</span>
-              <a href="login.html" class="font-bold">Login to your account</a>
+              <a href="login.html" class="font-bold text-primaryRed"
+                >Login to your account</a
+              >
             </p>
             <h1 class="text-5xl md:text-4xl mt-5">Register Your Account</h1>
-            <p class="mt-5 text-gray-4 text-xl md:text-base">
-              We bring your dream home to life
-            </p>
-            <form class="grid grid-cols-2 mt-10 gap-y-10 gap-x-4">
+            <form
+              class="flex flex-col md:flex-row justify-between mt-10 gap-y-10 gap-x-10"
+            >
               <div class="w-full flex flex-col gap-5">
                 <div class="form-control box-shadow-1">
                   <input
@@ -93,20 +98,40 @@
                   />
                 </div>
                 <div class="form-control">
-                  <input
-                    type="submit"
-                    value="Register your Account"
-                    class="w-full rounded-full bg-darkBlue text-white px-6 py-5 outline-none"
-                  />
+                  <button
+                    class="flex justify-between w-full rounded-full bg-darkBlue text-white px-6 py-3 outline-none"
+                  >
+                    <span class="my-auto">Register your Account</span>
+                    <img
+                      src="assets/right-arrow.png"
+                      class="w-8 invert my-auto"
+                      alt=""
+                    />
+                  </button>
                 </div>
               </div>
-              <div class="w-full flex flex-col gap-5 my-auto md:my-0">
-                <span class="w-full rounded-full px-6 py-5 border border-gray-4"
-                  >Sign up with your Gmail Account</span
+              <span class="font-bold text-xl my-auto">OR</span>
+              <div class="w-full flex flex-col gap-5 my-auto text-left">
+                <p
+                  class="flex gap-5 rounded-full px-6 py-3 border border-gray-4 text-sm"
                 >
-                <span class="w-full rounded-full px-6 py-5 border border-gray-4"
-                  >Sign up with your facebook</span
+                  <img
+                    src="assets/google.png"
+                    alt="google image"
+                    class="w-6 h-auto"
+                  />
+                  <span class="my-auto">Sign up with Gmail</span>
+                </p>
+                <p
+                  class="flex gap-5 rounded-full px-6 py-3 border border-gray-4 text-sm"
                 >
+                  <img
+                    src="assets/google.png"
+                    alt="facebook image"
+                    class="w-6 h-auto"
+                  />
+                  <span class="my-auto">Sign up with facebook</span>
+                </p>
               </div>
             </form>
           </div>

@@ -37,16 +37,21 @@
         </div>
       </section>
 
-      <nav class="fixed w-full z-50">
-        <div class="w-full p-8 md:px-16 md:py-10 flex justify-between text-sm">
-          <a href="#"><img src="assets/logo.png" alt="ABRMS logo" /></a>
-          <ul class="md:flex justify-between gap-5 hidden">
+      <nav id="navbar" class="fixed w-full z-50 transition-all">
+        <div
+          id="navdiv"
+          class="w-full p-8 md:px-16 md:py-10 flex justify-between text-sm"
+        >
+          <a href="#" id="logo"
+            ><img src="assets/logo.png" alt="ABRMS logo"
+          /></a>
+          <ul class="md:flex justify-between gap-5 hidden my-auto">
             <li><a href="jobs.html">Jobs</a></li>
             <li><a href="cleaning.html">Cleaning</a></li>
             <li><a href="relocation.html">Relocation</a></li>
             <li><a href="real-estate.html">Real Estate</a></li>
           </ul>
-          <ul class="md:flex justify-between gap-5 hidden">
+          <ul class="md:flex justify-between gap-5 hidden my-auto">
             <li><a href="#">Downloads</a></li>
             <li><a href="login.html">Login</a></li>
             <li>
@@ -55,11 +60,12 @@
               >
             </li>
           </ul>
-          <button class="md:hidden">
+          <button id="navbtn" class="md:hidden my-auto">
             <img src="assets/menu.png" alt="menu button" class="btn w-7" />
           </button>
         </div>
       </nav>
+      <script src="navbarchange.js"></script>
 
       <section id="hero" class="relative h-screen md:h-full">
         <!-- <div
@@ -90,20 +96,10 @@
             id="img-hero"
             class="w-4/5 h-96 hidden md:flex justify-between gap-10"
           >
-            <div class="div-img-1 w-2/5">
-              <img
-                src="assets/real-estate.jpg"
-                alt="real estate image"
-                class="w-full h-full"
-              />
-            </div>
-            <div class="div-img-2 w-2/5">
-              <img
-                src="assets/cleaning.jpg"
-                alt="cleaning image"
-                class="w-full h-full"
-              />
-            </div>
+            <div
+              class="div-img-2 w-2/5 bg-real_estate bg-cover bg-center"
+            ></div>
+            <div class="div-img-1 w-2/5 bg-cleaning bg-cover bg-center"></div>
           </div>
           <!-- Floating contact info -->
           <div
@@ -331,5 +327,6 @@
       </footer>
     </main>
     <script src="main.js"></script>
+    <script src="navbarchange.js"></script>
   </body>
 </html>
