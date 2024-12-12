@@ -37,33 +37,30 @@
         </div>
       </section>
 
-      <nav class="fixed w-full z-50">
-        <div
-          class="w-full p-8 md:px-16 md:py-4 flex justify-between text-sm bg-darkBlue text-white"
-        >
+      <nav class="fixed w-full bg-darkBlue text-white z-50">
+        <div class="w-full p-8 md:px-16 md:py-4 flex justify-between text-sm">
           <a href="index.html"
             ><img src="assets/logo-alt.png" class="w-28" alt="ABRMS logo"
           /></a>
           <ul class="md:flex justify-between gap-5 hidden my-auto">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#" class="font-bold">Jobs</a></li>
-            <li><a href="#">Download</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="cleaning.html">Cleaning</a></li>
+            <li><a href="relocation.html">Relocation</a></li>
+            <li><a href="real-estate.html">Real Estate</a></li>
           </ul>
           <ul class="md:flex justify-between gap-5 hidden my-auto">
-            <li><a href="#">Login</a></li>
-            <li>
-              <a href="#" class="bg-white text-darkBlue rounded-sm py-2 px-6"
-                >Register</a
-              >
+            <!-- <li class="my-auto">
+              <a href="#" class="flex -gap-4"
+                ><img src="assets/playstore.png" class="relative w-4 z-20" alt="" />
+                <img src="assets/app-store.png" class="relative w-4 z-10" alt=""
+              /></a>
+            </li> -->
+            <li class="my-auto">
+              <a href="#" class="flex -gap-4">Download</a>
             </li>
           </ul>
-          <button class="md:hidden">
-            <img
-              src="assets/menu.png"
-              alt="menu button"
-              class="btn w-7 invert"
-            />
+          <button class="md:hidden my-auto">
+            <img src="assets/menu.png" alt="menu button" class="btn w-7" />
           </button>
         </div>
       </nav>
@@ -73,7 +70,9 @@
           <div class="text-center my-10 md:my-0">
             <p class="text-sm">
               <span class="text-gray-4">Are you new?</span>
-              <a href="#" class="font-bold">Create an account with us</a>
+              <a href="register.html" class="font-bold"
+                >Create an account with us</a
+              >
             </p>
             <h1 class="text-5xl md:text-4xl mt-5">Login to Your Account</h1>
             <p class="mt-5 text-gray-4 text-xl md:text-base">
@@ -99,10 +98,14 @@
                 </div>
                 <div class="form-control flex justify-between">
                   <button
-                    class="w-full rounded-full bg-darkBlue text-white px-6 py-5 outline-none"
+                    class="flex justify-between w-full rounded-full bg-darkBlue text-white px-6 py-5 outline-none"
                   >
-                    <span>Login to your Account</span>
-                    <img src="assets/right-arrow.png" class="w-14" alt="" />
+                    <span class="my-auto">Login to your Account</span>
+                    <img
+                      src="assets/right-arrow.png"
+                      class="w-8 invert my-auto"
+                      alt=""
+                    />
                   </button>
                 </div>
               </div>
