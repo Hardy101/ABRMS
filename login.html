@@ -70,24 +70,54 @@
 
       <section>
         <div class="px-8 py-32 md:px-16">
-            <div>
-                <p></p>
-                <h1></h1>
-                <p></p>
-                <form action="">
-                    <div>
-                        <div class="form-control">Phone, Email</div>
-                        <div class="form-control">Passcode</div>
-                        <div class="form-control">Login to your Account</div>
-                    </div>
-                    <div>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div></div>
-                </form>
-            </div>
+          <div class="text-center my-10 md:my-0">
+            <p class="text-sm">
+              <span class="text-gray-4">Are you new?</span>
+              <a href="#" class="font-bold">Create an account with us</a>
+            </p>
+            <h1 class="text-5xl md:text-4xl mt-5">Login to Your Account</h1>
+            <p class="mt-5 text-gray-4 text-xl md:text-base">
+              We bring your dream home to life
+            </p>
+            <form
+              class="grid grid-rows-2 md:grid-rows-2 mt-10 gap-y-10 gap-x-10"
+            >
+              <div class="flex flex-col gap-5">
+                <div class="form-control">
+                  <input
+                    type="text"
+                    placeholder="Phone, Email"
+                    class="w-full rounded-full px-6 py-5 border border-gray-4 outline-none"
+                  />
+                </div>
+                <div class="form-control">
+                  <input
+                    type="text"
+                    placeholder="Passcode"
+                    class="w-full rounded-full px-6 py-5 border border-gray-4 outline-none"
+                  />
+                </div>
+                <div class="form-control">
+                  <input
+                    type="submit"
+                    value="Login to your Account"
+                    class="w-full rounded-full bg-darkBlue text-white px-6 py-5 outline-none"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-col gap-5 my-auto md:my-0">
+                <span class="w-full rounded-full px-6 py-5 border border-gray-4"
+                  >Sign in with your Gmail Account</span
+                >
+                <span class="w-full rounded-full px-6 py-5 border border-gray-4"
+                  >Sign in with your facebook</span
+                >
+              </div>
+              <div class="md:col-span-2">
+                <a href="#" class="font-bold">Forgot Passcode?</a>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
 
