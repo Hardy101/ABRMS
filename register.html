@@ -37,73 +37,81 @@
         </div>
       </section>
 
-      <nav class="fixed w-full bg-darkBlue text-white z-50">
-        <div class="w-full p-8 md:px-16 md:py-4 flex justify-between text-sm">
+      <nav class="fixed w-full z-50">
+        <div
+          class="w-full p-8 md:px-16 md:py-4 flex justify-between text-sm bg-darkBlue text-white"
+        >
           <a href="index.html"
             ><img src="assets/logo-alt.png" class="w-28" alt="ABRMS logo"
           /></a>
           <ul class="md:flex justify-between gap-5 hidden my-auto">
-            <li><a href="jobs.html">Jobs</a></li>
-            <li><a href="cleaning.html" class="font-bold">Cleaning</a></li>
-            <li><a href="relocation.html">Relocation</a></li>
-            <li><a href="real-estate.html">Real Estate</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#" class="font-bold">Jobs</a></li>
+            <li><a href="#">Download</a></li>
           </ul>
           <ul class="md:flex justify-between gap-5 hidden my-auto">
-            <li><a href="#">Downloads</a></li>
-            <li><a href="login.html">Login</a></li>
+            <li><a href="#">Login</a></li>
             <li>
-              <a
-                href="register.html"
-                class="bg-blue text-darkBlue bg-white py-2 px-6"
+              <a href="#" class="bg-white text-darkBlue rounded-sm py-2 px-6"
                 >Register</a
               >
             </li>
           </ul>
-          <button class="md:hidden my-auto">
-            <img src="assets/menu.png" alt="menu button" class="btn w-7" />
+          <button class="md:hidden">
+            <img
+              src="assets/menu.png"
+              alt="menu button"
+              class="btn w-7 invert"
+            />
           </button>
         </div>
       </nav>
 
       <section>
         <div class="px-8 py-32 md:px-16">
-          <div
-            id="header"
-            class="flex flex-col md:flex-row gap-y-8 justify-between mt-10"
-          >
-            <h1 class="w-full md:w-2/5 text-4xl font-bold text-darkBlue">
-              Professional Cleaning Services
-            </h1>
-            <div class="w-full md:w-2/5">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                sed elit nec est porta interdum. Phasellus porta arcu eget
-                ligula maximus,
-                <button>Book your clean now</button>
-              </p>
-            </div>
-          </div>
-          <div
-            id="body"
-            class="flex gap-10 flex-wrap flex-row justify-between mt-20"
-          >
-            <!-- cleaning type -->
-            <div
-              class="w-full md:w-3/12 flex flex-row md:flex-col items-start bg-white rounded-3xl box-shadow-1"
-            >
-              <img
-                src="assets/cleaning.jpg"
-                alt=""
-                class="w-5/12 md:w-28 h-full md:h-auto rounded-lg"
-              />
-              <div class="flex flex-col gap-1 items-start p-4">
-                <h2 class="font-bold text-xl">Janitorial Cleaning</h2>
-                <p class="text-sm text-gray-4">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Inventore eius quasi perspiciatis.
-                </p>
+          <div class="text-center my-10 md:my-0">
+            <p class="text-sm">
+              <span class="text-gray-4">Do you already have an account?</span>
+              <a href="#" class="font-bold">Login to your account</a>
+            </p>
+            <h1 class="text-5xl md:text-4xl mt-5">Register Your Account</h1>
+            <p class="mt-5 text-gray-4 text-xl md:text-base">
+              We bring your dream home to life
+            </p>
+            <form class="grid grid-cols-2 mt-10 gap-y-10 gap-x-4">
+              <div class="w-full flex flex-col gap-5">
+                <div class="form-control box-shadow-1">
+                  <input
+                    type="text"
+                    placeholder="Phone, Email"
+                    class="w-full rounded-full px-6 py-5 border border-gray-4 outline-none"
+                  />
+                </div>
+                <div class="form-control box-shadow-1">
+                  <input
+                    type="text"
+                    placeholder="Passcode"
+                    class="w-full rounded-full px-6 py-5 border border-gray-4 outline-none"
+                  />
+                </div>
+                <div class="form-control">
+                  <input
+                    type="submit"
+                    value="Register your Account"
+                    class="w-full rounded-full bg-darkBlue text-white px-6 py-5 outline-none"
+                  />
+                </div>
               </div>
-            </div>
+              <div class="w-full flex flex-col gap-5 my-auto md:my-0">
+                <span class="w-full rounded-full px-6 py-5 border border-gray-4"
+                  >Sign up with your Gmail Account</span
+                >
+                <span class="w-full rounded-full px-6 py-5 border border-gray-4"
+                  >Sign up with your facebook</span
+                >
+              </div>
+            </form>
           </div>
         </div>
       </section>
