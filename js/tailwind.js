@@ -17,9 +17,7 @@ tailwind.config = {
       },
     },
     backgroundImage: {
-      "hero-img": "url('assets/real-estate.jpg')",
       "no-img": "none",
-      hero: "url('assets/real-estate.jpg')",
       cleaning: "url('assets/cleaning.jpg')",
       cleaning_2: "url('assets/cleaning-2.jpg')",
       real_estate: "url('assets/real-estate.jpg')",
