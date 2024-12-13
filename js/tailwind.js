@@ -18,11 +18,11 @@ tailwind.config = {
     },
     backgroundImage: {
       "no-img": "none",
-      cleaning: "url('assets/cleaning.jpg')",
-      cleaning_2: "url('assets/cleaning-2.jpg')",
-      real_estate: "url('assets/real-estate.jpg')",
-      relocation: "url('assets/moving.jpg')",
-      pattern: "url('assets/bg-1.jpg')",
+      cleaning: "url('img/cleaning.jpg')",
+      cleaning_2: "url('img/cleaning-2.jpg')",
+      real_estate: "url('img/real-estate.jpg')",
+      relocation: "url('img/moving.jpg')",
+      pattern: "url('img/bg-1.jpg')",
     },
   },
 };
