@@ -77,19 +77,52 @@
           <div
             class="bg-gray-1 flex gap-y-8 flex-col md:flex-row rounded-3xl p-4"
           >
-            <div class="w-1/2">
-              <ul class="flex md:flex-col gap-2 my-auto">
+            <div class="md:w-1/2 px-4">
+              <ul class="hidden md:flex md:flex-col gap-2 my-auto">
                 <li class="">Personal Information</li>
                 <li class="">Service Selection</li>
                 <li class="">Service Specification</li>
                 <li class="">Pricing</li>
                 <li class="">Submit</li>
               </ul>
+              <ul class="steps relative flex mt-2 md:flex-col md:my-auto">
+                <li>
+                  <button
+                    class="step bg-green_custom rounded-full h-4 w-4"
+                  ></button>
+                </li>
+                <div
+                  class="w-10 h-[0.01rem] bg-green_custom mt-2.5 grow mx-2.5"
+                ></div>
+                <li>
+                  <button
+                    class="step bg-transparent border-2 border-green_custom rounded-full h-4 w-4"
+                  ></button>
+                </li>
+                <div class="w-10 h-[0.01rem] bg-black mt-2.5 grow mx-2.5"></div>
+                <li>
+                  <button
+                    class="step rounded-full border-2 border-transparent bg-white h-4 w-4"
+                  ></button>
+                </li>
+                <div class="w-10 h-[0.01rem] bg-black mt-2.5 grow mx-2.5"></div>
+                <li>
+                  <button
+                    class="step rounded-full border-2 border-transparent bg-white h-4 w-4"
+                  ></button>
+                </li>
+                <div class="w-10 h-[0.01rem] bg-black mt-2.5 grow mx-2.5"></div>
+                <li>
+                  <button
+                    class="step rounded-full border-2 border-transparent bg-white h-4 w-4"
+                  ></button>
+                </li>
+              </ul>
             </div>
-            <div class="bg-white md:w-1/2 rounded-3xl px-4 pt-2 pb-6">
+            <div class="bg-white md:w-1/2 rounded-3xl px-4 pt-4 pb-6">
               <h1 class="text-3xl font-bold">Service Request Form</h1>
               <form action="#" class="mt-5">
-                <div class="personal-info">
+                <div class="stepform personal-info">
                   <div class="form-control">
                     <label for="name" class="block text-sm text-gray-4"
                       >Full Name</label
@@ -125,13 +158,13 @@
                       cancel
                     </button>
                     <button
-                      class="px-2 py-1 font-bold rounded-xl bg-primaryRed text-white"
+                      class="fwd-btn px-2 py-1 font-bold rounded-xl bg-primaryRed text-white"
                     >
                       continue
                     </button>
                   </div>
                 </div>
-                <div class="hidden service-selection">
+                <div class="stepform hidden service-selection">
                   <div class="form-control">
                     <label for="name" class="block text-sm text-gray-4"
                       >Select Service</label
@@ -167,7 +200,9 @@
                   <div
                     class="form-control mt-10 flex justify-between items-center"
                   >
-                    <button class="px-2 py-1 font-bold border rounded-xl">
+                    <button
+                      class="bwd-btn px-2 py-1 font-bold border rounded-xl"
+                    >
                       back
                     </button>
                     <div class="flex gap-3">
@@ -175,14 +210,14 @@
                         cancel
                       </button>
                       <button
-                        class="px-2 py-1 font-bold rounded-xl bg-primaryRed text-white"
+                        class="fwd-btn px-2 py-1 font-bold rounded-xl bg-primaryRed text-white"
                       >
                         continue
                       </button>
                     </div>
                   </div>
                 </div>
-                <div class="hidden service-specifications">
+                <div class="stepform hidden service-specifications">
                   <div class="form-control">
                     <label for="name" class="block text-sm text-gray-4"
                       >Select Service</label
@@ -219,7 +254,9 @@
                   <div
                     class="form-control mt-10 flex justify-between items-center"
                   >
-                    <button class="px-2 py-1 font-bold border rounded-xl">
+                    <button
+                      class="bwd-btn px-2 py-1 font-bold border rounded-xl"
+                    >
                       back
                     </button>
                     <div class="flex gap-3">
@@ -227,14 +264,14 @@
                         cancel
                       </button>
                       <button
-                        class="px-2 py-1 font-bold rounded-xl bg-primaryRed text-white"
+                        class="fwd-btn px-2 py-1 font-bold rounded-xl bg-primaryRed text-white"
                       >
                         continue
                       </button>
                     </div>
                   </div>
                 </div>
-                <div class="hidden pricing">
+                <div class="stepform hidden pricing">
                   <div class="form-control">
                     <label for="name" class="block text-sm text-gray-4"
                       >Select Pricing Method</label
@@ -299,7 +336,9 @@
                   <div
                     class="form-control mt-10 flex justify-between items-center"
                   >
-                    <button class="px-2 py-1 font-bold border rounded-xl">
+                    <button
+                      class="bwd-btn px-2 py-1 font-bold border rounded-xl"
+                    >
                       back
                     </button>
                     <div class="flex gap-3">
@@ -307,14 +346,14 @@
                         cancel
                       </button>
                       <button
-                        class="px-2 py-1 font-bold rounded-xl bg-primaryRed text-white"
+                        class="fwd-btn px-2 py-1 font-bold rounded-xl bg-primaryRed text-white"
                       >
                         submit
                       </button>
                     </div>
                   </div>
                 </div>
-                <div class="hidden submit">
+                <div class="stepform hidden submit">
                   <div class="form-control">
                     <img
                       src="../img/check-mark.png"
@@ -374,5 +413,90 @@
       </footer>
     </main>
     <script src="../js/main.js"></script>
+    <script>
+      // Select all the form sections and buttons
+      const sections = document.querySelectorAll(".stepform");
+      const forwardButtons = document.querySelectorAll(".fwd-btn");
+      const backButtons = document.querySelectorAll(".bwd-btn");
+
+      const steps = document.querySelectorAll(".steps .step");
+      const lines = document.querySelectorAll(".steps .line");
+
+      let currentIndex = 0; // Track the currently visible section
+      updateProgress(currentIndex);
+
+      function updateProgress(currentIndex) {
+        steps.forEach((step, index) => {
+          if (index < currentIndex) {
+            // Completed steps
+            step.classList.add("bg-green_custom");
+            step.classList.remove(
+              "bg-transparent",
+              "border-2",
+              "border-transparent"
+            );
+          } else if (index === currentIndex) {
+            // Current step
+            step.classList.add(
+              "bg-transparent",
+              "border-2",
+              "border-green_custom"
+            );
+            step.classList.remove("bg-green_custom", "border-transparent");
+          } else {
+            // Future steps
+            step.classList.add("bg-white", "border-2", "border-transparent");
+            step.classList.remove(
+              "bg-green_custom",
+              "bg-transparent",
+              "border-green_custom"
+            );
+          }
+        });
+
+        lines.forEach((line, index) => {
+          if (index < currentIndex - 1) {
+            // Completed lines
+            line.classList.add("bg-green_custom");
+            line.classList.remove("bg-black");
+          } else {
+            // Future lines
+            line.classList.add("bg-black");
+            line.classList.remove("bg-green_custom");
+          }
+        });
+      }
+      // Function to update visible section
+      function updateSections() {
+        sections.forEach((section, index) => {
+          section.classList.toggle("hidden", index !== currentIndex);
+        });
+      }
+
+      // Event listener for forward buttons
+      forwardButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          if (currentIndex < sections.length - 1) {
+            currentIndex++;
+            updateSections();
+            updateProgress(currentIndex);
+          }
+        });
+      });
+
+      // Event listener for back buttons
+      backButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          if (currentIndex > 0) {
+            currentIndex--;
+            updateSections();
+            updateProgress(currentIndex);
+          }
+        });
+      });
+
+      // Initial setup to show the first section
+      updateSections();
+    </script>
   </body>
 </html>

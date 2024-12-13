@@ -14,6 +14,7 @@ tailwind.config = {
         },
         blue: "#384B70",
         turquoise_custon: "#01BAEF",
+        green_custom: "#118B50",
       },
     },
     backgroundImage: {
