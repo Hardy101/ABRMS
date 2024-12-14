@@ -46,9 +46,11 @@
           <ul class="md:flex justify-between gap-5 hidden my-auto">
             <li><a href="../index.html">Home</a></li>
             <li><a href="jobs.html">Jobs</a></li>
-            <li><a href="cleaning.html" class="font-bold">Cleaning</a></li>
+            <li><a href="cleaning.html">Cleaning</a></li>
             <li><a href="relocation.html">Relocation</a></li>
-            <li><a href="real-estate.html">Real Estate</a></li>
+            <li>
+              <a href="real-estate.html" class="font-bold">Real Estate</a>
+            </li>
           </ul>
           <ul class="md:flex justify-between gap-5 hidden my-auto">
             <li><a href="#">Downloads</a></li>
@@ -71,8 +73,296 @@
         </div>
       </nav>
 
-      <section>
-        <div class="px-8 py-32 md:px-16"></div>
+      <section
+        id="hero"
+        class="relative h-screen bg-real_estate_bg bg-cover bg-center"
+      >
+        <div
+          class="overlay absolute bg-black opacity-50 w-full h-full z-0"
+        ></div>
+        <div
+          class="relative flex align-center h-full px-8 py-32 md:px-16 text-white z-10"
+        >
+          <div class="my-auto md:w-3/5">
+            <h1 class="text-7xl font-bold">
+              We will help you find your
+              <span class="text-blue-2">Dream</span> Home
+            </h1>
+            <p class="text-gray-4 mt-3">
+              Buy your dream home today without any agents or commissions
+            </p>
+          </div>
+          <div
+            class="absolute bottom-28 action-btns bg-white text-darkBlue rounded-sm"
+          >
+            <div class="flex">
+              <button class="font-bold px-10 py-4">Buy</button>
+              <button class="font-bold px-10 py-4">Sell</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="howitworks">
+        <div class="px-8 py-32 md:px-16 bg-real_estate_1 bg-cover bg-center">
+          <h2>How it works</h2>
+          <p>
+            A great platform to buy, sell and rent your properties without any
+            agent or commisions
+          </p>
+          <ul class="service-list">
+            <li>
+              <div class="service-card">
+                <div class="card-icon">
+                  <ion-icon
+                    name="home-outline"
+                    role="img"
+                    class="md hydrated"
+                    aria-label="home outline"
+                  ></ion-icon>
+                </div>
+                <h3 class="h3 card-title">Evaluate Property</h3>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+                  suscipit neque nemo voluptatibus! Quas quis delectus sunt
+                  incidunt numquam.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+                <div class="card-icon">
+                  <ion-icon
+                    name="briefcase-outline"
+                    role="img"
+                    class="md hydrated"
+                    aria-label="briefcase outline"
+                  ></ion-icon>
+                </div>
+                <h3 class="h3 card-title">Meeting With Agent</h3>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+                  suscipit neque nemo voluptatibus! Quas quis delectus sunt
+                  incidunt numquam.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+                <div class="card-icon">
+                  <ion-icon
+                    name="key-outline"
+                    role="img"
+                    class="md hydrated"
+                    aria-label="key outline"
+                  ></ion-icon>
+                </div>
+                <h3 class="h3 card-title">Close The Deal</h3>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+                  suscipit neque nemo voluptatibus! Quas quis delectus sunt
+                  incidunt numquam.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="featuredproperties">
+        <div class="px-8 py-32 md:px-16 bg-real_estate_1 bg-cover bg-center">
+          <h2>How it works</h2>
+          <p>
+            A great platform to buy, sell and rent your properties without any
+            agent or commisions
+          </p>
+          <ul class="property-list">
+            <li>
+              <div class="property-card">
+                <figure
+                  class="card-banner img-holder"
+                  style="--width: 800; --height: 533"
+                >
+                  <img
+                    src="/static/images/img2.jpg"
+                    width="800px"
+                    height="533"
+                    loading="lazy"
+                    alt=""
+                    class="img-cover"
+                  />
+                </figure>
+                <button class="card-action-btn" aria-label="add to favourite">
+                  <ion-icon
+                    name="heart"
+                    role="img"
+                    class="md hydrated"
+                    aria-label="heart"
+                  ></ion-icon>
+                </button>
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title"
+                      >75 Manor Way, Great Missenden, UK</a
+                    >
+                  </h3>
+                  <ul class="card-list">
+                    <li class="card-item">
+                      <div class="item-icon">
+                        <ion-icon
+                          name="cube-outline"
+                          role="img"
+                          class="md hydrated"
+                          aria-label="cube outline"
+                        ></ion-icon>
+                      </div>
+
+                      <span class="item-text">7500sqf</span>
+                    </li>
+
+                    <li class="card-item">
+                      <div class="item-icon">
+                        <ion-icon
+                          name="bed-outline"
+                          role="img"
+                          class="md hydrated"
+                          aria-label="bed outline"
+                        ></ion-icon>
+                      </div>
+                      <span class="item-text">3 Beds</span>
+                    </li>
+
+                    <li class="card-item">
+                      <div class="item-icon">
+                        <ion-icon
+                          name="man-outline"
+                          role="img"
+                          class="md hydrated"
+                          aria-label="man outline"
+                        ></ion-icon>
+                      </div>
+                      <span class="item-text">2 Baths</span>
+                    </li>
+                  </ul>
+
+                  <div class="card-meta">
+                    <div>
+                      <span class="meta-title">Price</span>
+                      <span class="meta-text">$3500</span>
+                    </div>
+
+                    <div>
+                      <span class="meta-title">Rating</span>
+                      <span class="meta-text">
+                        <div class="rating-wrapper">
+                          <ion-icon
+                            name="star"
+                            role="img"
+                            class="md hydrated"
+                            aria-label="star"
+                          ></ion-icon>
+                          <ion-icon
+                            name="star"
+                            role="img"
+                            class="md hydrated"
+                            aria-label="star"
+                          ></ion-icon>
+                          <ion-icon
+                            name="star"
+                            role="img"
+                            class="md hydrated"
+                            aria-label="star"
+                          ></ion-icon>
+                          <ion-icon
+                            name="star"
+                            role="img"
+                            class="md hydrated"
+                            aria-label="star"
+                          ></ion-icon>
+                          <ion-icon
+                            name="star"
+                            role="img"
+                            class="md hydrated"
+                            aria-label="star"
+                          ></ion-icon>
+                        </div>
+
+                        <span>5.0(24)</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="property-card">
+                <figure
+                  class="card-banner img-holder"
+                  style="--width: 800; --height: 533"
+                >
+                  <img
+                    src="/static/images/img3.jpg"
+                    width="800px"
+                    height="533"
+                    loading="lazy"
+                    alt=""
+                    class="img-cover"
+                  />
+                </figure>
+                <button class="card-action-btn" aria-label="add to favourite">
+                  <ion-icon
+                    name="heart-outline"
+                    role="img"
+                    class="md hydrated"
+                    aria-label="heart outline"
+                  ></ion-icon>
+                </button>
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title"
+                      >12 Bootham Cresent, Ridgeway, UK</a
+                    >
+                  </h3>
+                  <ul class="card-list">
+                    <li class="card-item">
+                      <div class="item-icon">
+                        <ion-icon
+                          name="bed-outline"
+                          role="img"
+                          class="md hydrated"
+                          aria-label="bed outline"
+                        ></ion-icon>
+                      </div>
+                      <span class="item-text">3 Beds</span>
+                    </li>
+
+                    <li class="card-item">
+                      <div class="item-icon">
+                        <ion-icon
+                          name="man-outline"
+                          role="img"
+                          class="md hydrated"
+                          aria-label="man outline"
+                        ></ion-icon>
+                      </div>
+                      <span class="item-text">2 Baths</span>
+                    </li>
+                  </ul>
+
+                  <div class="card-meta">
+                    <div>
+                      <span class="meta-title">Price</span>
+                      <span class="meta-text">$4000</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <footer>
@@ -106,6 +396,14 @@
         </div>
       </footer>
     </main>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <script src="../js/main.js"></script>
   </body>
 </html>
