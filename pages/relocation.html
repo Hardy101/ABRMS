@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="tailwind.js"></script>
+    <script src="../js/tailwind.js"></script>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
     </style>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="../index.css" />
     <title>Jobs</title>
   </head>
   <body>
@@ -20,14 +20,15 @@
       >
         <div class="relative h-full flex justify-center align-center">
           <button class="absolute right-10 top-10">
-            <img src="assets/cancel.png" alt="menu button" class="btn w-12" />
+            <img src="../img/cancel.png" alt="menu button" class="btn w-12" />
           </button>
           <ul class="flex flex-col gap-10 text-white text-4xl my-auto">
-            <li><a href="">HOME</a></li>
+            <li><a href="../index.html">HOME</a></li>
             <li><a href="jobs.html">JOBS</a></li>
+            <li><a href="real-estate.html">REAL ESTATE</a></li>
             <li><a href="cleaning.html">CLEANING</a></li>
-            <li><a href="relocation.html">RELOCATION</a></li>
-            <li class="mt-32"><a href="login.html">LOGIN</a></li>
+            <li><a href="#">RELOCATION</a></li>
+            <li class="mt-32"><a href="#">LOGIN</a></li>
             <li>
               <a href="register.html" class="px-8 py-3 bg-white text-darkBlue"
                 >REGISTER</a
@@ -39,20 +40,22 @@
 
       <nav class="fixed w-full bg-darkBlue text-white z-50">
         <div class="w-full p-8 md:px-16 md:py-4 flex justify-between text-sm">
-          <a href="index.html"
-            ><img src="assets/logo-alt.png" class="w-28" alt="ABRMS logo"
+          <a href="../index.html"
+            ><img src="../img/logo.png" class="w-28 invert" alt="ABRMS logo"
           /></a>
           <ul class="md:flex justify-between gap-5 hidden my-auto">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li><a href="jobs.html">Jobs</a></li>
-            <li><a href="cleaning.html" class="font-bold">Cleaning</a></li>
-            <li><a href="relocation.html">Relocation</a></li>
+            <li><a href="cleaning.html">Cleaning</a></li>
+            <li><a href="#" class="font-bold">Relocation</a></li>
             <li><a href="real-estate.html">Real Estate</a></li>
           </ul>
           <ul class="md:flex justify-between gap-5 hidden my-auto">
-            <li><a href="#">Downloads</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li>
+            <li class="my-auto">
+              <a href="#" class="flex -gap-4">Download</a>
+            </li>
+            <li class="my-auto"><a href="login.html">Login</a></li>
+            <li class="my-auto">
               <a
                 href="register.html"
                 class="bg-blue text-darkBlue bg-white py-2 px-6"
@@ -62,7 +65,7 @@
           </ul>
           <button class="md:hidden my-auto">
             <img
-              src="assets/menu.png"
+              src="../img/menu.png"
               alt="menu button"
               class="btn w-7 invert"
             />
@@ -77,14 +80,18 @@
             class="flex flex-col md:flex-row gap-y-8 justify-between mt-10"
           >
             <h1 class="w-full md:w-2/5 text-4xl font-bold text-darkBlue">
-              Professional Cleaning Services
+              Full-Service Moving & Relocation Experts
             </h1>
             <div class="w-full md:w-2/5">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
                 sed elit nec est porta interdum. Phasellus porta arcu eget
                 ligula maximus,
-                <button>Book your clean now</button>
+                <a
+                  href="service-request.html"
+                  class="block text-center text-white text-sm bg-darkBlue rounded-full py-2 mt-5"
+                  >Relocate with ease</a
+                >
               </p>
             </div>
           </div>
@@ -94,16 +101,33 @@
           >
             <!-- cleaning type -->
             <div
-              class="w-full md:w-3/12 flex flex-row md:flex-col items-start bg-white rounded-3xl box-shadow-1"
+              class="w-full md:w-3/12 flex flex-row md:flex-col items-start bg-white rounded-3xl box-shadow-2 overflow-hidden"
             >
               <img
-                src="assets/cleaning.jpg"
+                src="../img/cleaning.jpg"
                 alt=""
                 class="w-5/12 md:w-28 h-full md:h-auto rounded-lg"
               />
               <div class="flex flex-col gap-1 items-start p-4">
-                <h2 class="font-bold text-xl">Janitorial Cleaning</h2>
-                <p class="text-sm text-gray-4">
+                <h2 class="font-bold text-xl">Local Move</h2>
+                <p class="text-sm text-gray-5">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Inventore eius quasi perspiciatis.
+                </p>
+              </div>
+            </div>
+            <!-- cleaning type -->
+            <div
+              class="w-full md:w-3/12 flex flex-row md:flex-col items-start bg-white rounded-3xl box-shadow-2 overflow-hidden"
+            >
+              <img
+                src="../img/cleaning.jpg"
+                alt=""
+                class="w-5/12 md:w-28 h-full md:h-auto rounded-lg"
+              />
+              <div class="flex flex-col gap-1 items-start p-4">
+                <h2 class="font-bold text-xl">Long Distance Move</h2>
+                <p class="text-sm text-gray-5">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                   Inventore eius quasi perspiciatis.
                 </p>
@@ -122,7 +146,7 @@
               <h3 class="text-2xl font-bold">ABRMS</h3>
             </div>
             <div id="quicklinks">
-              <ul class="grid grid-cols-2 gap-x-10 gap-y-3 text-gray-primary">
+              <ul class="grid grid-cols-2 gap-x-10 gap-y-3 text-gray-2">
                 <li>Buy or rent property</li>
                 <li>Jobs</li>
                 <li>Sell as realtor</li>
@@ -132,10 +156,10 @@
               </ul>
             </div>
           </div>
-          <hr class="relative h-0.5 bg-gray-primary" />
+          <hr class="relative h-0.5 bg-gray-2" />
           <div class="mt-6 flex justify-between gap-y-3 flex-col md:flex-row">
             <p>&copy; 2024 ABRMS</p>
-            <ul class="flex flex-row gap-5 text-gray-primary">
+            <ul class="flex flex-row gap-5 text-gray-2">
               <li><a href="#">Terms of service</a></li>
               <li><a href="#">Cookies</a></li>
               <li><a href="#">Privacy Policy</a></li>
@@ -144,6 +168,6 @@
         </div>
       </footer>
     </main>
-    <script src="main.js"></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>
