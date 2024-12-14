@@ -12,7 +12,7 @@
     <title>Jobs</title>
   </head>
   <body>
-    <main class="relative fira-sans-regular bg-gray-bg">
+    <main class="relative fira-sans-regular">
       <!-- Mobile Navbar -->
       <section
         id="sidebar"
@@ -104,25 +104,28 @@
       </section>
 
       <section id="howitworks">
-        <div class="px-8 py-32 md:px-16 bg-real_estate_1 bg-cover bg-center">
-          <h2>How it works</h2>
-          <p>
+        <div class="px-8 py-16 md:px-16 text-center">
+          <h2 class="text-2xl font-bold">How it works</h2>
+          <p class="text-gray-5 mt-3">
             A great platform to buy, sell and rent your properties without any
             agent or commisions
           </p>
-          <ul class="service-list">
+          <ul
+            id="servicelist"
+            class="mt-10 flex gap-12 gap flex-col md:flex-row justify-center"
+          >
             <li>
-              <div class="service-card">
-                <div class="card-icon">
+              <div class="flex flex-col gap-4">
+                <div class="bg-blue-3 px-5 py-4 mx-auto rounded-full">
                   <ion-icon
                     name="home-outline"
                     role="img"
-                    class="md hydrated"
+                    class="ion_icons md:text-4xl"
                     aria-label="home outline"
                   ></ion-icon>
                 </div>
-                <h3 class="h3 card-title">Evaluate Property</h3>
-                <p class="card-text">
+                <h3 class="text-xl">Evaluate Property</h3>
+                <p class="text-gray-5 text-sm">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
                   suscipit neque nemo voluptatibus! Quas quis delectus sunt
                   incidunt numquam.
@@ -131,17 +134,17 @@
             </li>
 
             <li>
-              <div class="service-card">
-                <div class="card-icon">
+              <div class="flex flex-col gap-4">
+                <div class="bg-blue-3 px-5 py-4 mx-auto rounded-full">
                   <ion-icon
                     name="briefcase-outline"
                     role="img"
-                    class="md hydrated"
+                    class="ion_icons md:text-4xl"
                     aria-label="briefcase outline"
                   ></ion-icon>
                 </div>
-                <h3 class="h3 card-title">Meeting With Agent</h3>
-                <p class="card-text">
+                <h3 class="text-xl">Meeting With Agent</h3>
+                <p class="text-gray-5 text-sm">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
                   suscipit neque nemo voluptatibus! Quas quis delectus sunt
                   incidunt numquam.
@@ -150,17 +153,17 @@
             </li>
 
             <li>
-              <div class="service-card">
-                <div class="card-icon">
+              <div class="flex flex-col gap-4">
+                <div class="bg-blue-3 px-5 py-4 mx-auto rounded-full">
                   <ion-icon
                     name="key-outline"
                     role="img"
-                    class="md hydrated"
+                    class="ion_icons md:text-4xl"
                     aria-label="key outline"
                   ></ion-icon>
                 </div>
-                <h3 class="h3 card-title">Close The Deal</h3>
-                <p class="card-text">
+                <h3 class="text-xl">Close The Deal</h3>
+                <p class="text-gray-5 text-sm">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
                   suscipit neque nemo voluptatibus! Quas quis delectus sunt
                   incidunt numquam.
@@ -172,21 +175,23 @@
       </section>
 
       <section id="featuredproperties">
-        <div class="px-8 py-32 md:px-16 bg-real_estate_1 bg-cover bg-center">
-          <h2>How it works</h2>
-          <p>
+        <div
+          class="px-8 py-32 md:px-16 bg-real_estate_1 bg-cover bg-center text-center"
+        >
+          <h2 class="text-2xl font-bold">Feaured Properties</h2>
+          <p class="text-gray-5 mt-3">
             A great platform to buy, sell and rent your properties without any
             agent or commisions
           </p>
-          <ul class="property-list">
+          <ul
+            id="propertylist"
+            class="mt-10 flex gap-12 gap flex-col md:flex-row justify-center"
+          >
             <li>
-              <div class="property-card">
-                <figure
-                  class="card-banner img-holder"
-                  style="--width: 800; --height: 533"
-                >
+              <div class="property-card text-left">
+                <figure class="card-banner img-holder">
                   <img
-                    src="/static/images/img2.jpg"
+                    src="../img/prop-1.jpg"
                     width="800px"
                     height="533"
                     loading="lazy"
@@ -194,169 +199,36 @@
                     class="img-cover"
                   />
                 </figure>
-                <button class="card-action-btn" aria-label="add to favourite">
+                <button class="card-action-btn hidden" aria-label="add to favourite">
                   <ion-icon
-                    name="heart"
+                    name="bookmark"
                     role="img"
                     class="md hydrated"
-                    aria-label="heart"
+                    aria-label="bookmark"
                   ></ion-icon>
                 </button>
-                <div class="card-content">
-                  <h3 class="h3">
-                    <a href="#" class="card-title"
-                      >75 Manor Way, Great Missenden, UK</a
-                    >
-                  </h3>
-                  <ul class="card-list">
-                    <li class="card-item">
-                      <div class="item-icon">
-                        <ion-icon
-                          name="cube-outline"
-                          role="img"
-                          class="md hydrated"
-                          aria-label="cube outline"
-                        ></ion-icon>
-                      </div>
-
-                      <span class="item-text">7500sqf</span>
-                    </li>
-
-                    <li class="card-item">
-                      <div class="item-icon">
-                        <ion-icon
-                          name="bed-outline"
-                          role="img"
-                          class="md hydrated"
-                          aria-label="bed outline"
-                        ></ion-icon>
-                      </div>
-                      <span class="item-text">3 Beds</span>
-                    </li>
-
-                    <li class="card-item">
-                      <div class="item-icon">
-                        <ion-icon
-                          name="man-outline"
-                          role="img"
-                          class="md hydrated"
-                          aria-label="man outline"
-                        ></ion-icon>
-                      </div>
-                      <span class="item-text">2 Baths</span>
-                    </li>
-                  </ul>
-
-                  <div class="card-meta">
-                    <div>
-                      <span class="meta-title">Price</span>
-                      <span class="meta-text">$3500</span>
-                    </div>
-
-                    <div>
-                      <span class="meta-title">Rating</span>
-                      <span class="meta-text">
-                        <div class="rating-wrapper">
-                          <ion-icon
-                            name="star"
-                            role="img"
-                            class="md hydrated"
-                            aria-label="star"
-                          ></ion-icon>
-                          <ion-icon
-                            name="star"
-                            role="img"
-                            class="md hydrated"
-                            aria-label="star"
-                          ></ion-icon>
-                          <ion-icon
-                            name="star"
-                            role="img"
-                            class="md hydrated"
-                            aria-label="star"
-                          ></ion-icon>
-                          <ion-icon
-                            name="star"
-                            role="img"
-                            class="md hydrated"
-                            aria-label="star"
-                          ></ion-icon>
-                          <ion-icon
-                            name="star"
-                            role="img"
-                            class="md hydrated"
-                            aria-label="star"
-                          ></ion-icon>
-                        </div>
-
-                        <span>5.0(24)</span>
-                      </span>
-                    </div>
+                <div class="card-content mt-8 flex flex-col gap-3">
+                  <h3 class="h3 text-2xl">75 Manor Way, Great Missenden, UK</h3>
+                  <div class="hidden card-meta flex justify-between">
+                    <span class="text-2xl font-bold">$3500</span>
                   </div>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="property-card">
-                <figure
-                  class="card-banner img-holder"
-                  style="--width: 800; --height: 533"
-                >
-                  <img
-                    src="/static/images/img3.jpg"
-                    width="800px"
-                    height="533"
-                    loading="lazy"
-                    alt=""
-                    class="img-cover"
-                  />
-                </figure>
-                <button class="card-action-btn" aria-label="add to favourite">
-                  <ion-icon
-                    name="heart-outline"
-                    role="img"
-                    class="md hydrated"
-                    aria-label="heart outline"
-                  ></ion-icon>
-                </button>
-                <div class="card-content">
-                  <h3 class="h3">
-                    <a href="#" class="card-title"
-                      >12 Bootham Cresent, Ridgeway, UK</a
+                  <ul class="card-list flex gap-4">
+                    <span class="text-blue-2 my-auto rounded-full py-2 px-6 border border-blue-2"
+                      >7500sqf</span
                     >
-                  </h3>
-                  <ul class="card-list">
-                    <li class="card-item">
-                      <div class="item-icon">
-                        <ion-icon
-                          name="bed-outline"
-                          role="img"
-                          class="md hydrated"
-                          aria-label="bed outline"
-                        ></ion-icon>
-                      </div>
-                      <span class="item-text">3 Beds</span>
-                    </li>
-
-                    <li class="card-item">
-                      <div class="item-icon">
-                        <ion-icon
-                          name="man-outline"
-                          role="img"
-                          class="md hydrated"
-                          aria-label="man outline"
-                        ></ion-icon>
-                      </div>
-                      <span class="item-text">2 Baths</span>
-                    </li>
+                    <span class="text-blue-2 my-auto rounded-full py-2 px-6 border border-blue-2"
+                      >3 Beds</span
+                    >
+                    <span class="text-blue-2 my-auto rounded-full py-2 px-6 border border-blue-2"
+                      >2 Baths</span
+                    >
                   </ul>
-
-                  <div class="card-meta">
-                    <div>
-                      <span class="meta-title">Price</span>
-                      <span class="meta-text">$4000</span>
-                    </div>
+                  <div class="mt-5">
+                    <button
+                      class="w-full bg-blue-2 py-3 text-center text-white text-xl rounded-sm"
+                    >
+                      Buy
+                    </button>
                   </div>
                 </div>
               </div>

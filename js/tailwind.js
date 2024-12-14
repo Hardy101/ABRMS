@@ -15,6 +15,7 @@ tailwind.config = {
         blue: {
           1: "#384B70",
           2: "#179fee",
+          3: "#f4faf7",
         },
         turquoise_custon: "#01BAEF",
         green_custom: "#118B50",
