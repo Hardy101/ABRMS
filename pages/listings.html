@@ -8,6 +8,10 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
     </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="../index.css" />
     <title>Properties</title>
   </head>
@@ -56,14 +60,9 @@
             <li><a href="#">Inbox</a></li>
             <li><a href="#">Downloads</a></li>
             <li><a href="login.html">Login/register</a></li>
-            <li>
-              <a
-                href="dashboard.html"
-                class="bg-blue text-darkBlue bg-white py-2 px-4"
-                >Dashboard</a
-              >
-            </li>
+            <li><a href="dashboard.html">Dashboard</a></li>
           </ul>
+          <!-- mobile visible components -->
           <ul class="flex gap-4 my-auto md:hidden">
             <li class="my-auto">
               <a
@@ -127,25 +126,45 @@
           <h2 class="font-bold">
             250 Results for <span class="text-gray-5">`Ekosodin`</span>
           </h2>
+          <!-- Parent Results Div -->
           <div class="property-div grid md:grid-cols-4 gap-x-4 gap-y-8 mt-4">
+            <!-- Listing result -->
             <div
               class="relative property flex-col gap-8 bg-white p-4 rounded-2xl"
             >
-              <div class="relative text-blue-2 text-2xl md:text-base">
-                <div class="absolute inset-y-1/2 -left-2">
-                  <button class="right flex bg-white rounded-full p-1 bs-3">
+              <!-- div with img -->
+              <div
+                id="propslideshow"
+                class="relative text-blue-2 text-2xl md:text-base"
+              >
+                <!-- action button back -->
+                <div class="absolute inset-y-1/2 -left-2 z-10">
+                  <button class="back flex bg-white rounded-full p-1 bs-3">
                     <ion-icon name="chevron-back-outline"></ion-icon>
                   </button>
                 </div>
-                <div class="absolute inset-y-1/2 -right-2">
+                <!-- action button forward -->
+                <div class="absolute inset-y-1/2 -right-2 z-10">
                   <button class="right flex bg-white rounded-full p-1 bs-3">
                     <ion-icon name="chevron-forward-outline"></ion-icon>
                   </button>
                 </div>
+
+                <!-- Image slides -->
                 <img
                   src="../img/prop-2.jpg"
                   alt="property"
-                  class="w-full rounded-xl"
+                  class="slide w-full rounded-xl animate__animated animate__fadeIn"
+                />
+                <img
+                  src="../img/prop-3.jpg"
+                  alt="property"
+                  class="hidden slide w-full rounded-xl animate__animated animate__fadeIn"
+                />
+                <img
+                  src="../img/prop-4.jpg"
+                  alt="property"
+                  class="hidden slide w-full rounded-xl animate__animated animate__fadeIn"
                 />
               </div>
               <div class="mt-3">
@@ -228,5 +247,30 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
     <script src="../js/main.js"></script>
+    <script>
+      const slides = document.querySelectorAll(".slide");
+      const forwardButton = document.querySelector(".right");
+      const backButton = document.querySelector(".back");
+
+      let currentIndex = 0;
+
+      const showSlide = (index) => {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("hidden", i !== index);
+        });
+      };
+
+      forwardButton.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+      });
+
+      backButton.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+      });
+
+      showSlide(currentIndex);
+    </script>
   </body>
 </html>
