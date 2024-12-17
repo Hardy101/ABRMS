@@ -17,7 +17,7 @@ tailwind.config = {
           2: "#179fee",
           3: "#f4faf7",
         },
-        turquoise_custon: "#01BAEF",
+        turquoise_custom: "#01BAEF",
         green_custom: "#118B50",
       },
     },

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../js/tailwind.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="../index.css" />
+    <title>Properties</title>
+  </head>
+  <body>
+    <main class="relative fira-sans-regular bg-gray-bg">
+      <!-- Mobile Navbar -->
+      <section
+        id="sidebar"
+        class="hidden fixed w-full h-full bg-darkBlue z-[9999]"
+      >
+        <div class="relative h-full flex justify-center align-center">
+          <button class="absolute right-10 top-10">
+            <img src="../img/cancel.png" alt="menu button" class="btn w-12" />
+          </button>
+          <ul class="flex flex-col gap-10 text-white text-4xl my-auto">
+            <li><a href="../">HOME</a></li>
+            <li><a href="jobs.html">JOBS</a></li>
+            <li><a href="real-estate.html">REAL ESTATE</a></li>
+            <li><a href="cleaning.html">CLEANING</a></li>
+            <li><a href="relocation.html">RELOCATION</a></li>
+            <li class="mt-32"><a href="login.html">LOGIN</a></li>
+            <li>
+              <a href="register.html" class="px-8 py-3 bg-white text-darkBlue"
+                >REGISTER</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <nav class="fixed w-full bg-darkBlue text-white z-50">
+        <div class="w-full p-8 md:px-16 md:py-4 flex justify-between text-sm">
+          <a href="../index.html"
+            ><img src="../img/logo.png" class="w-28 invert" alt="ABRMS logo"
+          /></a>
+          <ul class="md:flex justify-between gap-5 hidden my-auto">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="cleaning.html">Cleaning</a></li>
+            <li><a href="relocation.html">Relocation</a></li>
+            <li>
+              <a href="real-estate.html">Real Estate</a>
+            </li>
+          </ul>
+          <ul class="md:flex justify-between gap-5 hidden my-auto">
+            <li><a href="#">Inbox</a></li>
+            <li><a href="#">Downloads</a></li>
+            <li><a href="login.html">Login/register</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+          <!-- mobile visible components -->
+          <ul class="flex gap-4 my-auto md:hidden">
+            <li class="my-auto">
+              <a
+                href="dashboard.html"
+                class="flex bg-darkBlue text-white rounded-sm text-xl"
+                ><ion-icon name="apps-sharp"></ion-icon
+              ></a>
+            </li>
+            <li class="my-auto">
+              <a
+                href="messages.html"
+                class="flex bg-darkBlue text-white rounded-sm text-xl"
+                ><ion-icon name="chatbox-outline"></ion-icon
+              ></a>
+            </li>
+
+            <li class="my-auto ml-3">
+              <button>
+                <img
+                  src="../img/menu.png"
+                  alt="menu button"
+                  class="btn w-7 invert"
+                />
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <section id="propertysection">
+        <div class="px-8 py-20">
+          <div
+            id="listingnav"
+            class="md:px-0 pt-16 pb-8 md:py-4 flex justify-between text-sm"
+          >
+            <div
+              class="w-full flex flex-col md:flex-row gap-y-8 justify-between my-auto"
+            >
+              <ul class="flex gap-4 my-auto">
+                <li class="my-auto">
+                  <a href="../index.html" class="font-bold text-lg"
+                    >All Listings</a
+                  >
+                </li>
+                <li class="my-auto">
+                  <a href="../index.html" class="font-bold text-gray-5"
+                    >Recently Added</a
+                  >
+                </li>
+              </ul>
+
+              <div class="my-auto md:w-1/5">
+                <input
+                  type="text"
+                  placeholder="search property"
+                  class="w-full px-4 py-4 bg-gray-1 rounded-full outline-none placeholder:text-sm placeholder:font-bold"
+                />
+              </div>
+            </div>
+          </div>
+          <h2 class="font-bold">
+            250 Results for <span class="text-gray-5">`Ekosodin`</span>
+          </h2>
+          <!-- Parent Results Div -->
+          <div class="property-div grid md:grid-cols-4 gap-x-4 gap-y-8 mt-4">
+            <!-- Listing result -->
+            <div
+              class="relative property flex-col gap-8 bg-white p-4 rounded-2xl"
+            >
+              <!-- div with img -->
+              <div
+                id="propslideshow"
+                class="relative text-blue-2 text-2xl md:text-base"
+              >
+                <!-- action button back -->
+                <div class="absolute inset-y-1/2 -left-2 z-10">
+                  <button class="back flex bg-white rounded-full p-1 bs-3">
+                    <ion-icon name="chevron-back-outline"></ion-icon>
+                  </button>
+                </div>
+                <!-- action button forward -->
+                <div class="absolute inset-y-1/2 -right-2 z-10">
+                  <button class="right flex bg-white rounded-full p-1 bs-3">
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                  </button>
+                </div>
+
+                <!-- Image slides -->
+                <img
+                  src="../img/prop-2.jpg"
+                  alt="property"
+                  class="slide w-full rounded-xl animate__animated animate__fadeIn"
+                />
+                <img
+                  src="../img/prop-3.jpg"
+                  alt="property"
+                  class="hidden slide w-full rounded-xl animate__animated animate__fadeIn"
+                />
+                <img
+                  src="../img/prop-4.jpg"
+                  alt="property"
+                  class="hidden slide w-full rounded-xl animate__animated animate__fadeIn"
+                />
+              </div>
+              <div class="mt-3">
+                <h2 class="listingtitle font-bold text-xl">Ekosodin</h2>
+                <div class="listinginfo flex gap-y-3 flex-col text-xs">
+                  <p
+                    class="my-auto flex flex-wrap gap-3 font-bold text-gray-5 mt-2"
+                  >
+                    <span class="bdrms text-darkBlue">Self con</span>
+                    <span class="bdrms flex gap-2"
+                      ><ion-icon name="bed-outline" class="my-auto"></ion-icon>
+                      <span class="my-auto">4 bedrooms</span></span
+                    >
+                    <span class="bdrms flex gap-2"
+                      ><ion-icon name="man-outline" class="my-auto"></ion-icon>
+                      <span class="my-auto">1 bathroom(s)</span></span
+                    >
+                  </p>
+                  <div
+                    class="price font-bold flex flex-col gap-y-4 justify-between"
+                  >
+                    <p class="flex gap-1">
+                      <span class="text-base">₦250k</span>
+                      <span class="text-gray-5 my-auto">per year</span>
+                    </p>
+                    <button
+                      class="flex justify-center gap-2 bg-darkBlue text-white rounded-lg py-3"
+                    >
+                      <span class="my-auto">Contact Realtor</span>
+                      <ion-icon
+                        name="chatbox-ellipses-outline"
+                        class="my-auto text-xl"
+                      ></ion-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="p-8 md:p-16 text-white bg-black">
+          <div
+            class="my-6 flex justify-between flex-col md:flex-row gap-y-5 md:gap-0"
+          >
+            <div>
+              <h3 class="text-2xl font-bold">ABRMS</h3>
+            </div>
+            <div id="quicklinks">
+              <ul class="grid grid-cols-2 gap-x-10 gap-y-3 text-gray-2">
+                <li>Buy or rent property</li>
+                <li>Jobs</li>
+                <li>Sell as realtor</li>
+                <li>Services</li>
+                <li>Hire a cleaning service</li>
+                <li>Hire a moving service</li>
+              </ul>
+            </div>
+          </div>
+          <hr class="relative h-0.5 bg-gray-2" />
+          <div class="mt-6 flex justify-between gap-y-3 flex-col md:flex-row">
+            <p>&copy; 2024 ABRMS</p>
+            <ul class="flex flex-row gap-5 text-gray-2">
+              <li><a href="#">Terms of service</a></li>
+              <li><a href="#">Cookies</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="../js/main.js"></script>
+    <script>
+      const slides = document.querySelectorAll(".slide");
+      const forwardButton = document.querySelector(".right");
+      const backButton = document.querySelector(".back");
+
+      let currentIndex = 0;
+
+      const showSlide = (index) => {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("hidden", i !== index);
+        });
+      };
+
+      forwardButton.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+      });
+
+      backButton.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+      });
+
+      showSlide(currentIndex);
+    </script>
+  </body>
+</html>
