@@ -39,9 +39,13 @@
       </section>
 
       <section>
-        <div class="h-screen grid grid-cols-3 bg-white">
-          <div class="col-span-1 grid grid-cols-2">
-            <div id="msg-navbar" class="h-full relative p-8 flex flex-col gap-y-10">
+        <div class="h-screen grid grid-cols-1 md:grid-cols-2 bg-white">
+          <!-- Message Navbar -->
+          <div class="hidden md:grid grid-cols-3">
+            <div
+              id="msg-navbar"
+              class="h-full relative p-8 flex flex-col gap-y-10 border-r-2 border-gray-1"
+            >
               <img src="../img/logo.png" alt="" />
               <ul class="flex flex-col gap-y-3 font-bold">
                 <li class="text-gray-5">
@@ -82,60 +86,74 @@
                 <i class="fa-solid fa-right-from-bracket"></i>
               </div>
             </div>
-            <div id="msg-div">
-              <div id="header">
-                <h1>Messages</h1>
-                <button><ion-icon name="add-outline"></ion-icon></button>
-                <form action="#">
+            <div id="msg-div" class="col-span-2 p-8 border-r-2 border-gray-1">
+              <div id="header" class="grid grid-cols-2 gap-y-4">
+                <h1 class="text-xl font-bold">Messages</h1>
+                <button class="text-right">
+                  <ion-icon name="add-outline"></ion-icon>
+                </button>
+                <form action="#" class="col-span-2">
                   <input
                     type="text"
                     name=""
                     id=""
                     placeholder="Search messages"
+                    class="w-full bg-gray-bg placeholder:font-bold placeholder:text-sm px-3 py-2 rounded-full"
                   />
                 </form>
-                <ul>
-                  <li><button>All</button></li>
-                  <li><button>Applications</button></li>
-                  <li><button>Real Estate</button></li>
-                  <li><button>Customer Care</button></li>
+                <ul class="flex flex-row gap-4 hidden">
+                  <li><button class="text-sm px-6 py-1">All</button></li>
+                  <li>
+                    <button class="text-sm px-6 py-1">Applications</button>
+                  </li>
+                  <li>
+                    <button class="text-sm px-6 py-1">Real Estate</button>
+                  </li>
+                  <li>
+                    <button class="text-sm px-6 py-1">Customer Care</button>
+                  </li>
                 </ul>
               </div>
-              <div id="body">
-                <div class="msg msg-body-click">
-                  <p class="msg-authandmsg">
-                    <span>Jane Doe</span>
-                    <span
+              <div id="body" class="mt-10">
+                <div class="msg msg-body-click flex justify-between">
+                  <p class="msg-authandmsg flex flex-col">
+                    <span class="font-bold text-lg">Jane Doe</span>
+                    <span class="text-sm text-gray-5"
                       >Hello, I've been trying to log in to my acount...</span
                     >
                   </p>
-                  <p class="msg-authandmsg">
-                    <span>1</span>
-                    <span>9:15 AM</span>
+                  <p
+                    class="msg-authandmsg flex flex-col gap-y-2 text-right my-auto"
+                  >
+                    <span
+                      class="text-xs bg-blue-2 text-white font-bold rounded-full text-center mx-auto px-2"
+                      >1</span
+                    >
+                    <span class="text-xs text-gray-5">9:15 AM</span>
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <div id="msg-body" class="col-span-2 relative">
+          <div id="msg-body" class="relative flex flex-col">
             <!-- Header { Author, Call } -->
-            <div class="msg-body-header">
+            <div class="msg-body-header p-6 flex justify-between">
               <div class="msg-body-header grid grid-cols-2">
-                <img src="" alt="" />
-                <span>Jane Doe</span>
-                <span>Online</span>
+                <img src="../img/janedoe.jpg" class="w-8 h-8 rounded-full row-span-2 my-auto" alt="" />
+                <span class="text-md font-bold">Jane Doe</span>
+                <span class="text-blue-2 text-xs">Online</span>
               </div>
-              <i class="fa-solid fa-phone"></i>
+              <i class="fa-solid fa-phone my-auto" ></i>
             </div>
             <!-- messages -->
-            <div class="msg-body-msg">
-              <div class="chat-bubble">
+            <div class="msg-body-msg bg-gray-bg grow pt-10">
+              <div class="chat-bubble flex flex-col gap-y-2 bg-white rounded-md p-3 text-sm mr-10 ml-3">
                 <p class="chat-bubble-msg">
                   Hello, i’ve been trying to log into my account on another
                   device but it keeps saying that sessions invalid, what does
                   this mean pls?
                 </p>
-                <p class="chat-bubble-time">9:15 AM</p>
+                <p class="chat-bubble-time text-xs text-gray-5">9:15 AM</p>
               </div>
             </div>
             <!-- Messages Footer -->
