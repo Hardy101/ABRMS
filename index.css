@@ -33,6 +33,16 @@
   .listingprop {
     display: flex;
   }
+  /* Hide scrollbar for chrome, safari and opera */
+
+  .rmv-scrollbar::-webkit-scrollbar {
+    width: 0 !important;
+  }
+
+  /* hide scrollbar for IE and edge */
+  .rmv-scrollbar {
+    scrollbar-width: none;
+  }
   /* Fonts */
   .fira-sans-regular {
     font-family: "Fira Sans", sans-serif;

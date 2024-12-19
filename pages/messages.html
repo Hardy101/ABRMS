@@ -39,15 +39,19 @@
       </section>
 
       <section>
-        <div class="h-screen grid grid-cols-1 md:grid-cols-2 bg-white">
-          <div class="md:grid grid-cols-3">
-            <!-- Message Navbar -->
+        <div
+          id="msgParentDiv"
+          class="h-screen grid grid-cols-1 md:grid-cols-2 bg-white"
+        >
+          <!-- Message Nav and Messages -->
+          <div id="NavMsg" class="md:grid grid-cols-3 h-screen">
+            <!-- Left Section -->
             <div
               id="msg-navbar"
               class="hidden h-full relative p-8 md:flex flex-col gap-y-10 border-r-2 border-gray-1"
             >
-              <img src="../img/logo.png" alt="" />
-              <ul class="flex flex-col gap-y-3 font-bold">
+              <img src="../img/logo.png" class="w-20 mr-auto" alt="" />
+              <ul class="flex flex-col gap-y-4 font-bold text-sm">
                 <li class="text-gray-5">
                   <a href="../index.html" class="flex gap-8">
                     <ion-icon name="home" class="text-sm my-auto"></ion-icon>
@@ -81,21 +85,36 @@
               </ul>
 
               <div class="absolute bottom-10">
-                <img src="" alt="" />
-                <span>ABRMS</span>
-                <i class="fa-solid fa-right-from-bracket"></i>
+                <div class="msg-body-header flex gap-4">
+                  <img
+                    src="../img/janedoe.jpg"
+                    class="w-6 h-7 rounded-full row-span-2 my-auto"
+                    alt="profile picture"
+                  />
+                  <span class="text-sm font-bold my-auto">ABRMS</span>
+                  <a href="#" class="my-auto text-primaryRed"
+                    ><i class="fa-solid fa-right-from-bracket"></i
+                  ></a>
+                </div>
               </div>
             </div>
-            <!-- Messages -->
-            <div id="msg-div" class="col-span-2 border-r-2 border-gray-1">
-              <div id="header" class="grid grid-cols-2 gap-y-4 p-4 md:p-8">
-                <h1 class="text-xl font-bold">Messages</h1>
+
+            <!-- Scrollable Body Section -->
+            <div
+              id="msg-div"
+              class="rmv-scrollbar h-full col-span-2 border-r-2 border-gray-1 overflow-y-auto"
+            >
+              <div id="header" class="grid grid-cols-2 gap-y-4 py-8 p-4">
+                <h1 class="text-2xl md:text-xl font-bold">Messages</h1>
                 <button class="text-right">
-                  <ion-icon name="add-outline"></ion-icon>
+                  <ion-icon
+                    name="add-outline"
+                    class="bg-blue-2 text-white rounded-full text-2xl"
+                  ></ion-icon>
                 </button>
                 <form
                   action="#"
-                  class="col-span-2 flex gap-2 align-center bg-gray-bg rounded-full px-3 py-2 text-[#999999]"
+                  class="col-span-2 flex gap-2 align-center bg-gray-bg rounded-full px-3 text-[#999999]"
                 >
                   <button><i class="fa-solid fa-magnifying-glass"></i></button>
                   <input
@@ -103,7 +122,7 @@
                     name=""
                     id=""
                     placeholder="Search messages"
-                    class="w-full flex-1 bg-transparent placeholder:font-bold placeholder:text-sm"
+                    class="w-full flex-1 bg-transparent py-4 md:py-2 text-black font-bold placeholder:font-bold placeholder:text-sm"
                   />
                   <button class="text-[#999999]">
                     <i class="fa-solid fa-sort"></i>
@@ -122,13 +141,15 @@
                   </li>
                 </ul>
               </div>
-              <div id="body" class="">
+
+              <!-- Messages -->
+              <div id="body" class="flex flex-col gap-y-4">
                 <div
                   class="msg msg-body-click flex justify-between px-4 hover:bg-gray-bg"
                 >
                   <p class="msg-authandmsg flex flex-col">
-                    <span class="font-bold text-lg">Jane Doe</span>
-                    <span class="text-sm text-gray-5"
+                    <span class="font-bold text-md">Jane Doe</span>
+                    <span class="text-xs text-gray-5"
                       >Hello, I've been trying to log in to my acount...</span
                     >
                   </p>
@@ -145,11 +166,12 @@
               </div>
             </div>
           </div>
-          <div id="msg-body" class="hidden relative flex flex-col">
+          <!-- Chats -->
+          <div id="msgChat" class="hidden h-full relative flex flex-col">
             <!-- Header { Author, Call } -->
             <div class="msg-body-header p-6 flex justify-between">
               <div class="msg-body-header flex gap-4">
-                <button class="md:hidden text-sm my-auto">
+                <button class="md:hidden text-sm my-auto" id="backToMsg">
                   <i class="fa-solid fa-chevron-left"></i>
                 </button>
                 <img
@@ -164,7 +186,7 @@
               </div>
               <i class="fa-solid fa-phone my-auto"></i>
             </div>
-            <!-- messages -->
+            <!-- Chat -->
             <div class="msg-body-msg bg-gray-bg grow pt-10">
               <div
                 class="chat-bubble flex flex-col gap-y-2 bg-white rounded-md p-3 text-sm mr-10 ml-3"
@@ -177,7 +199,7 @@
                 <p class="chat-bubble-time text-xs text-gray-5">9:15 AM</p>
               </div>
             </div>
-            <!-- Messages Footer -->
+            <!-- Chat Actions -->
             <div class="msg-body-footer">
               <form>
                 <div class="form-control flex gap-2 justify-between p-3">
@@ -208,5 +230,23 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
     <script src="../js/main.js"></script>
+    <script>
+      const parentDiv = document.querySelector("#msgParentDiv");
+      const NavMsg = document.querySelector("#NavMsg");
+      const msgChat = document.querySelector("#msgChat");
+      const chatClick = document.querySelectorAll(".msg-body-click");
+      const backToMsgButton = document.querySelectorAll(".backToMsg");
+
+      const msgChatToggle = () => {
+        NavMsg.classList.toggle("hidden");
+        msgChat.classList.toggle("hidden");
+      };
+
+      chatClick.forEach((chat) => {
+        chat.addEventListener("click", msgChatToggle);
+      });
+
+      backToMsg.addEventListener("click", msgChatToggle);
+    </script>
   </body>
 </html>
