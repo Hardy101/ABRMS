@@ -13,6 +13,31 @@
   </head>
   <body>
     <main class="relative fira-sans-regular bg-gray-bg">
+      <!-- Mobile Navbar -->
+      <section
+        id="sidebar"
+        class="hidden fixed w-full h-full bg-darkBlue z-[9999]"
+      >
+        <div class="relative h-full flex justify-center align-center">
+          <button class="absolute right-10 top-10">
+            <img src="../img/cancel.png" alt="menu button" class="btn w-12" />
+          </button>
+          <ul class="flex flex-col gap-10 text-white text-4xl my-auto">
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="jobs.html">JOBS</a></li>
+            <li><a href="real-estate.html">REAL ESTATE</a></li>
+            <li><a href="cleaning.html">CLEANING</a></li>
+            <li><a href="relocation.html">RELOCATION</a></li>
+            <li class="mt-32"><a href="login.html">LOGIN</a></li>
+            <li>
+              <a href="register.html" class="px-8 py-3 bg-white text-darkBlue"
+                >REGISTER</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
       <section>
         <div
           id="msgParentDiv"
@@ -34,25 +59,25 @@
                   </a>
                 </li>
                 <li class="text-gray-5">
-                  <a href="../index.html" class="flex gap-8">
+                  <a href="jobs.html" class="flex gap-8">
                     <i class="fa-solid fa-briefcase text-sm my-auto"></i>
                     <span class="my-auto">Jobs</span>
                   </a>
                 </li>
                 <li class="text-gray-5">
-                  <a href="../index.html" class="flex gap-8">
+                  <a href="cleaning.html" class="flex gap-8">
                     <i class="fa-solid fa-broom text-sm my-auto"></i>
                     <span class="my-auto">Cleaning</span>
                   </a>
                 </li>
                 <li class="text-gray-5">
-                  <a href="../index.html" class="flex gap-8">
+                  <a href="real-estate.html" class="flex gap-8">
                     <i class="fa-solid fa-sign-hanging text-sm my-auto"></i>
                     <span class="my-auto">Real Estate</span>
                   </a>
                 </li>
                 <li class="text-gray-5">
-                  <a href="../index.html" class="flex gap-8">
+                  <a href="relocation.html" class="flex gap-8">
                     <i class="fa-solid fa-truck-ramp-box text-sm my-auto"></i>
                     <span class="my-auto">Relocation</span>
                   </a>
@@ -128,7 +153,11 @@
               </div>
 
               <!-- Floating Navigation Button -->
-               <button class="absolute bottom-10 right-5 text-4xl bg-white rounded-full px-3 bs-3"><ion-icon name="menu-outline"></ion-icon></button>
+              <button
+                class="btn md:hidden absolute bottom-10 right-5 text-4xl bg-white rounded-full px-3 bs-3"
+              >
+                <ion-icon name="menu-outline"></ion-icon>
+              </button>
 
               <!-- Heading { Messages, Plus Button } -->
               <div id="header" class="grid grid-cols-2 gap-y-4 py-8 p-4">

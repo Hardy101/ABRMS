@@ -53,23 +53,38 @@
             </li>
           </ul>
           <ul class="md:flex justify-between gap-5 hidden my-auto">
+            <li><a href="messages.html">Inbox</a></li>
             <li><a href="#">Downloads</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li>
+            <li><a href="login.html">Login/register</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+          <!-- mobile visible components -->
+          <ul class="flex gap-4 my-auto md:hidden">
+            <li class="my-auto">
               <a
-                href="register.html"
-                class="bg-blue text-darkBlue bg-white py-2 px-6"
-                >Register</a
-              >
+                href="dashboard.html"
+                class="flex bg-darkBlue text-white rounded-sm text-xl"
+                ><ion-icon name="apps-sharp"></ion-icon
+              ></a>
+            </li>
+            <li class="my-auto">
+              <a
+                href="messages.html"
+                class="flex bg-darkBlue text-white rounded-sm text-xl"
+                ><ion-icon name="chatbox-outline"></ion-icon
+              ></a>
+            </li>
+
+            <li class="my-auto ml-3">
+              <button>
+                <img
+                  src="../img/menu.png"
+                  alt="menu button"
+                  class="btn w-7 invert"
+                />
+              </button>
             </li>
           </ul>
-          <button class="md:hidden my-auto">
-            <img
-              src="../img/menu.png"
-              alt="menu button"
-              class="btn w-7 invert"
-            />
-          </button>
         </div>
       </nav>
 
