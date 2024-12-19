@@ -50,7 +50,7 @@
               id="msg-navbar"
               class="hidden h-full relative p-8 md:flex flex-col gap-y-10 border-r-2 border-gray-1"
             >
-              <img src="../img/logo.png" class="w-20 mr-auto" alt="" />
+              <img src="../img/logo.png" class="w-20 mr-auto" alt="logo" />
               <ul class="flex flex-col gap-y-4 font-bold text-sm">
                 <li class="text-gray-5">
                   <a href="../index.html" class="flex gap-8">
@@ -102,14 +102,49 @@
             <!-- Scrollable Body Section -->
             <div
               id="msg-div"
-              class="rmv-scrollbar h-full col-span-2 border-r-2 border-gray-1 overflow-y-auto"
+              class="rmv-scrollbar relative h-full col-span-2 border-r-2 border-gray-1 overflow-y-auto"
             >
+              <div id="searchacct" class="hidden absolute w-4/5 top-20 right-4">
+                <div class="bg-white bs-3 rounded-2xl p-4 flex flex-col gap-4">
+                  <h3 class="text-xl font-bold">New Message</h3>
+                  <form
+                    action="#"
+                    class="bg-gray-bg rounded-full px-3 text-[#999999]"
+                  >
+                    <div class="form-control">
+                      <input
+                        type="text"
+                        name="searchName"
+                        id="searchName"
+                        placeholder="Search Name or ID"
+                        class="w-full flex-1 bg-transparent py-2 md:py-2 text-black font-bold placeholder:font-bold placeholder:text-sm"
+                      />
+                    </div>
+                  </form>
+
+                  <div class="search-result-acct">
+                    <div class="result flex gap-4">
+                      <img
+                        src="../img/janedoe.jpg"
+                        class="w-8 h-8 rounded-full row-span-2 my-auto"
+                        alt="profile picture"
+                      />
+                      <p class="flex flex-col">
+                        <span class="text-md font-bold">Jane Doe</span>
+                        <span class="text-gray-5 text-xs">#142241</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Heading { Messages, Plus Button } -->
               <div id="header" class="grid grid-cols-2 gap-y-4 py-8 p-4">
                 <h1 class="text-2xl md:text-xl font-bold">Messages</h1>
-                <button class="text-right">
+                <button class="addMsgBtn text-right">
                   <ion-icon
                     name="add-outline"
-                    class="bg-blue-2 text-white rounded-full text-2xl"
+                    class="bg-blue-2 addicon ease-in duration-100 text-white rounded-full text-2xl"
                   ></ion-icon>
                 </button>
                 <form
@@ -119,8 +154,8 @@
                   <button><i class="fa-solid fa-magnifying-glass"></i></button>
                   <input
                     type="text"
-                    name=""
-                    id=""
+                    name="searchMsg"
+                    id="searchMsg"
                     placeholder="Search messages"
                     class="w-full flex-1 bg-transparent py-4 md:py-2 text-black font-bold placeholder:font-bold placeholder:text-sm"
                   />
@@ -177,14 +212,16 @@
                 <img
                   src="../img/janedoe.jpg"
                   class="w-8 h-8 rounded-full row-span-2 my-auto"
-                  alt=""
+                  alt="profile picture"
                 />
                 <p class="flex flex-col">
                   <span class="text-md font-bold">Jane Doe</span>
                   <span class="text-blue-2 text-xs">Online</span>
                 </p>
               </div>
-              <i class="fa-solid fa-phone my-auto"></i>
+              <a href="tel:+2348133560042"
+                ><i class="fa-solid fa-phone my-auto"></i
+              ></a>
             </div>
             <!-- Chat -->
             <div class="msg-body-msg bg-gray-bg grow pt-10">
@@ -217,6 +254,7 @@
         </div>
       </section>
     </main>
+
     <script
       src="https://kit.fontawesome.com/18e0f57c61.js"
       crossorigin="anonymous"
@@ -237,9 +275,18 @@
       const chatClick = document.querySelectorAll(".msg-body-click");
       const backToMsgButton = document.querySelectorAll(".backToMsg");
 
+      const searchacct = document.querySelector("#searchacct");
+      const addMsgBtn = document.querySelector(".addMsgBtn");
+      const addicon = document.querySelector(".addicon");
+
       const msgChatToggle = () => {
         NavMsg.classList.toggle("hidden");
         msgChat.classList.toggle("hidden");
+      };
+
+      const searchAcctToggle = () => {
+        addicon.classList.toggle("rotate-45");
+        searchacct.classList.toggle("hidden");
       };
 
       chatClick.forEach((chat) => {
@@ -247,6 +294,7 @@
       });
 
       backToMsg.addEventListener("click", msgChatToggle);
+      addMsgBtn.addEventListener("click", searchAcctToggle);
     </script>
   </body>
 </html>
