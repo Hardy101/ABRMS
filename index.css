@@ -43,6 +43,22 @@
   .rmv-scrollbar {
     scrollbar-width: none;
   }
+  /* Chat Bubble */
+  .bubble {
+    --r: 1em;
+    --t: 1.5em;
+
+    border-inline: var(--t) solid #0000;
+    border-radius: calc(var(--r) + var(--t)) / var(--r);
+    mask: radial-gradient(100% 100% at var(--_p) 0, #0000 99%, #000 102%)
+        var(--_p) 100% / var(--t) var(--t) no-repeat,
+      linear-gradient(#fff 0 0) padding-box;
+    background: linear-gradient(135deg, #fff, #f4f4f4) border-box;
+  }
+  .left {
+    --_p: 0;
+    border-bottom-left-radius: 0 0;
+  }
   /* Fonts */
   .fira-sans-regular {
     font-family: "Fira Sans", sans-serif;

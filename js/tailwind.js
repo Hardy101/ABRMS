@@ -29,6 +29,7 @@ tailwind.config = {
       real_estate_bg: "url('../img/real-estate-1.jpg')",
       relocation: "url('img/moving.jpg')",
       pattern: "url('img/bg-1.jpg')",
+      pattern_realestate: "url('../img/image.png')",
     },
   },
 };
