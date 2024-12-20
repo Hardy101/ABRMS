@@ -18,7 +18,10 @@
   <body>
     <main class="relative fira-sans-regular bg-gray-bg">
       <!-- Mobile Navbar -->
-      <section id="sidebar" class="hidden fixed w-full h-full bg-[#000] z-[9999]">
+      <section
+        id="sidebar"
+        class="hidden fixed w-full h-full bg-[#000] z-[9999]"
+      >
         <div class="relative h-full flex">
           <button class="absolute right-10 top-10">
             <img src="../img/cancel.png" alt="menu button" class="btn w-12" />
@@ -227,13 +230,15 @@
               </div>
             </div>
           </div>
-          <!-- Chats -->
+          <!-- Chat -->
           <div
             id="msgChat"
-            class="h-full relative flex flex-col hidden animate__animated animate__zoomIn"
+            class="hidden h-full rmv-scrollbar relative overflow-y-auto animate__animated animate__zoomIn"
           >
             <!-- Header { Author, Call } -->
-            <div class="msg-body-header p-6 flex justify-between">
+            <div
+              class="fixed top-0 w-full bg-white msg-body-header p-6 flex justify-between"
+            >
               <div class="msg-body-header flex gap-4">
                 <button class="md:hidden text-sm my-auto" id="backToMsg">
                   <i class="fa-solid fa-chevron-left"></i>
@@ -252,23 +257,108 @@
                 ><i class="fa-solid fa-phone"></i
               ></a>
             </div>
-            <!-- Chat -->
+
+            <!-- Chat Bubbles -->
             <div
-              class="msg-body-msg grow pt-10 bg-pattern_realestate bg-cover bg-center"
+              class="h-full rmv-scrollbar msg-body-msg flex flex-col gap-4 pt-10 bg-pattern_realestate bg-cover bg-center px-3 pt-32 pb-16 overflow-y-auto"
             >
+              <!-- from customer -->
               <div
-                class="chat-bubble flex flex-col gap-y-2 bubble left p-3 text-sm mr-10 ml-3"
+                class="chat-bubble bg-white rounded-md left p-3 text-sm w-3/4 self-start"
               >
-                <p class="chat-bubble-msg">
+                <p class="chat-bubble-msg flex flex-col gap-y-2">
                   Hello, i’ve been trying to log into my account on another
                   device but it keeps saying that sessions invalid, what does
                   this mean pls?
+                  <span class="chat-bubble-time text-xs text-gray-5"
+                    >9:15 AM</span
+                  >
                 </p>
-                <p class="chat-bubble-time text-xs text-gray-5">9:15 AM</p>
+              </div>
+
+              <!-- Customer Care -->
+              <div
+                class="chat-bubble bg-white rounded-md left p-3 text-sm w-3/4 self-end"
+              >
+                <p class="chat-bubble-msg flex flex-col gap-y-2">
+                  Hello Jane Doe, thanks for contacting us. The "session
+                  invalid" message you're seeing is likely due to our security
+                  measures. When you log in from a new device, our system
+                  requires an additional verification step. Please check your
+                  [email/phone number associated with your account] for a
+                  verification code. Enter this code on the login screen to
+                  complete the process.
+                  <span class="chat-bubble-time text-xs text-gray-5"
+                    >9:30 AM</span
+                  >
+                </p>
+              </div>
+              <!-- from customer -->
+              <div
+                class="chat-bubble bg-white rounded-md left p-3 text-sm w-3/4 self-start"
+              >
+                <p class="chat-bubble-msg flex flex-col gap-y-2">
+                  Hello, i’ve been trying to log into my account on another
+                  device but it keeps saying that sessions invalid, what does
+                  this mean pls?
+                  <span class="chat-bubble-time text-xs text-gray-5"
+                    >9:15 AM</span
+                  >
+                </p>
+              </div>
+
+              <!-- Customer Care -->
+              <div
+                class="chat-bubble bg-white rounded-md left p-3 text-sm w-3/4 self-end"
+              >
+                <p class="chat-bubble-msg flex flex-col gap-y-2">
+                  Hello Jane Doe, thanks for contacting us. The "session
+                  invalid" message you're seeing is likely due to our security
+                  measures. When you log in from a new device, our system
+                  requires an additional verification step. Please check your
+                  [email/phone number associated with your account] for a
+                  verification code. Enter this code on the login screen to
+                  complete the process.
+                  <span class="chat-bubble-time text-xs text-gray-5"
+                    >9:30 AM</span
+                  >
+                </p>
+              </div>
+              <!-- from customer -->
+              <div
+                class="chat-bubble bg-white rounded-md left p-3 text-sm w-3/4 self-start"
+              >
+                <p class="chat-bubble-msg flex flex-col gap-y-2">
+                  Hello, i’ve been trying to log into my account on another
+                  device but it keeps saying that sessions invalid, what does
+                  this mean pls?
+                  <span class="chat-bubble-time text-xs text-gray-5"
+                    >9:15 AM</span
+                  >
+                </p>
+              </div>
+
+              <!-- Customer Care -->
+              <div
+                class="chat-bubble bg-white rounded-md left p-3 text-sm w-3/4 self-end"
+              >
+                <p class="chat-bubble-msg flex flex-col gap-y-2">
+                  Hello Jane Doe, thanks for contacting us. The "session
+                  invalid" message you're seeing is likely due to our security
+                  measures. When you log in from a new device, our system
+                  requires an additional verification step. Please check your
+                  [email/phone number associated with your account] for a
+                  verification code. Enter this code on the login screen to
+                  complete the process.
+                  <span class="chat-bubble-time text-xs text-gray-5"
+                    >9:30 AM</span
+                  >
+                </p>
               </div>
             </div>
-            <!-- Chat Actions -->
-            <div class="msg-body-footer">
+
+            <!-- Chat Actions { Image, Message, Send} -->
+            <div class="msg-body-footer fixed bottom-0 w-full bg-white">
               <form>
                 <div class="form-control flex gap-2 justify-between p-3">
                   <ion-icon name="add-outline" class="my-auto"></ion-icon>
