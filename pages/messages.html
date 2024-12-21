@@ -112,7 +112,9 @@
             >
               <!-- Search Account -->
               <div id="searchacct" class="hidden absolute w-4/5 top-20 right-4">
-                <div class="bg-white bs-3 rounded-2xl p-4 flex flex-col gap-4">
+                <div
+                  class="bg-white box-shadow-2 rounded-2xl p-4 flex flex-col gap-4"
+                >
                   <h3 class="text-xl font-bold">New Message</h3>
                   <form
                     action="#"
@@ -145,6 +147,24 @@
                 </div>
               </div>
 
+              <!-- Sort Messages -->
+              <div
+                id="sortmessages"
+                class="hidden absolute w-4/5 top-20 right-4"
+              >
+                <div
+                  class="bg-white box-shadow-2 rounded-2xl p-4 flex flex-col gap-3"
+                >
+                  <h3 class="font-bold">Sort chats by</h3>
+
+                  <ul class="flex gap-2 flex-col text-sm text-gray-5">
+                    <li><button>Date/time (Oldest First)</button></li>
+                    <li><button>Read/Unread (Unread First)</button></li>
+                    <li><button>Read (Read First)</button></li>
+                  </ul>
+                </div>
+              </div>
+
               <!-- Navigation -->
               <div class="hidden floatnav w-full absolute bottom-28">
                 <ul
@@ -168,17 +188,21 @@
               </div>
 
               <!-- Heading { Messages, Plus Button } -->
-              <div id="header" class="grid grid-cols-2 gap-y-4 p-6 md:p-4">
-                <h1 class="text-2xl md:text-xl font-bold">Messages</h1>
-                <button class="addMsgBtn text-right">
-                  <ion-icon
-                    name="add-outline"
-                    class="bg-blue-2 addicon ease-in duration-100 text-white rounded-full text-2xl"
-                  ></ion-icon>
-                </button>
+              <div id="header" class="grid grid-cols-3 gap-y-4 p-6 md:p-4">
+                <h1 class="text-2xl md:text-xl font-bold col-span-2">
+                  Messages
+                </h1>
+                <div class="flex gap-3 justify-end">
+                  <button class="addMsgBtn text-right text-2xl">
+                    <ion-icon name="create-outline"></ion-icon>
+                  </button>
+                  <button class="sortMsg text-right text-2xl">
+                    <ion-icon name="filter-outline"></ion-icon>
+                  </button>
+                </div>
                 <form
                   action="#"
-                  class="col-span-2 flex gap-2 align-center bg-gray-bg rounded-full px-3 text-[#999999]"
+                  class="col-span-3 flex gap-2 align-center bg-gray-bg rounded-full px-3 text-[#999999]"
                 >
                   <button><i class="fa-solid fa-magnifying-glass"></i></button>
                   <input
@@ -195,7 +219,7 @@
 
                 <!-- Messages Type Filter -->
                 <ul
-                  class="col-span-2 text-sm flex flex-row gap-4 whitespace-nowrap overflow-x-auto text-center rmv-scrollbar"
+                  class="col-span-3 text-sm flex flex-row gap-4 whitespace-nowrap overflow-x-auto text-center rmv-scrollbar"
                 >
                   <li>
                     <button
@@ -236,7 +260,7 @@
               </div>
 
               <!-- Messages -->
-              <div id="body" class="flex flex-col gap-y-4 mt-3">
+              <div id="msgSection" class="h-full flex flex-col gap-y-4 mt-3">
                 <div
                   class="msg msg-body-click flex justify-between px-6 md:px-4 hover:bg-gray-bg"
                 >
@@ -290,6 +314,7 @@
               </div>
             </div>
           </div>
+
           <!-- Chat -->
           <div
             id="msgChat"
@@ -453,32 +478,77 @@
     ></script>
     <script src="../js/main.js"></script>
     <script>
-      const parentDiv = document.querySelector("#msgParentDiv");
-      const NavMsg = document.querySelector("#NavMsg");
-      const msgChat = document.querySelector("#msgChat");
-      const chatClick = document.querySelectorAll(".msg-body-click");
-      const backToMsgButton = document.querySelectorAll(".backToMsg");
-
-      const searchacct = document.querySelector("#searchacct");
-      const addMsgBtn = document.querySelector(".addMsgBtn");
-      const addicon = document.querySelector(".addicon");
-
-      const msgChatToggle = () => {
-        NavMsg.classList.toggle("hidden");
-        msgChat.classList.toggle("hidden");
+      const elements = {
+        msgSection: document.querySelector("#msgSection"),
+        parentDiv: document.querySelector("#msgParentDiv"),
+        NavMsg: document.querySelector("#NavMsg"),
+        msgChat: document.querySelector("#msgChat"),
+        chatClick: document.querySelectorAll(".msg-body-click"),
+        backToMsgButton: document.querySelectorAll(".backToMsg"),
+        searchAcct: document.querySelector("#searchacct"),
+        addMsgBtn: document.querySelector(".addMsgBtn"),
+        sortMessages: document.querySelector("#sortmessages"),
+        sortMsgBtn: document.querySelector(".sortMsg"),
       };
 
-      const searchAcctToggle = () => {
-        addicon.classList.toggle("rotate-45");
-        searchacct.classList.toggle("hidden");
+      // Utility function to toggle hidden class
+      const toggleHidden = (element) => {
+        if (element) element.classList.toggle("hidden");
       };
 
-      chatClick.forEach((chat) => {
-        chat.addEventListener("click", msgChatToggle);
-      });
+      const ensureHidden = (element, toggleFunction) => {
+        if (!element.classList.contains("hidden")) toggleFunction();
+      };
 
-      backToMsg.addEventListener("click", msgChatToggle);
-      addMsgBtn.addEventListener("click", searchAcctToggle);
+      // Event handlers
+      const handleMsgChatToggle = () => {
+        toggleHidden(elements.NavMsg);
+        toggleHidden(elements.msgChat);
+      };
+
+      const handleSearchAcctToggle = () => {
+        toggleHidden(elements.searchAcct);
+      };
+
+      const handleSortMessagesToggle = () => {
+        toggleHidden(elements.sortMessages);
+      };
+
+      // Attach event listeners
+      const attachListeners = () => {
+        elements.chatClick.forEach((chat) =>
+          chat.addEventListener("click", handleMsgChatToggle)
+        );
+
+        elements.backToMsgButton.forEach((button) =>
+          button.addEventListener("click", handleMsgChatToggle)
+        );
+
+        elements.addMsgBtn?.addEventListener("click", () => {
+          handleSearchAcctToggle();
+          ensureHidden(elements.sortMessages, handleSortMessagesToggle);
+        });
+
+        elements.sortMsgBtn?.addEventListener("click", () => {
+          handleSortMessagesToggle();
+          ensureHidden(elements.searchAcct, handleSearchAcctToggle);
+        });
+
+        elements.msgSection?.addEventListener("click", () => {
+          ensureHidden(elements.searchAcct, handleSearchAcctToggle);
+          ensureHidden(elements.sortMessages, handleSortMessagesToggle);
+        });
+
+        document.addEventListener("keyup", (e) => {
+          if (e.code === "Escape") {
+            ensureHidden(elements.searchAcct, handleSearchAcctToggle);
+            ensureHidden(elements.sortMessages, handleSortMessagesToggle);
+          }
+        });
+      };
+
+      // Initialize listeners
+      attachListeners();
     </script>
   </body>
 </html>
